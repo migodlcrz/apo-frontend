@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Hamburger from "../icons/Hamburger";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -29,10 +31,38 @@ const Navbar = () => {
           }`}
         >
           <ul className="p-4 space-y-2">
-            <li className="hover:bg-[#292e3b] p-2 rounded">Home</li>
-            <li className="hover:bg-[#292e3b] p-2 rounded">Events</li>
-            <li className="hover:bg-[#292e3b] p-2 rounded">About</li>
-            <li className="hover:bg-[#292e3b] p-2 rounded">Contact</li>
+            <li
+              className="hover:bg-[#292e3b] p-2 rounded"
+              onClick={() => {
+                setIsOpen(false), navigate("/");
+              }}
+            >
+              Home
+            </li>
+            <li
+              className="hover:bg-[#292e3b] p-2 rounded"
+              onClick={() => {
+                setIsOpen(false), navigate("/events");
+              }}
+            >
+              Events
+            </li>
+            <li
+              className="hover:bg-[#292e3b] p-2 rounded"
+              onClick={() => {
+                setIsOpen(false), navigate("/donate");
+              }}
+            >
+              Donate
+            </li>
+            <li
+              className="hover:bg-[#292e3b] p-2 rounded"
+              onClick={() => {
+                setIsOpen(false), navigate("/raffle");
+              }}
+            >
+              Raffle
+            </li>
           </ul>
         </div>
       </div>
