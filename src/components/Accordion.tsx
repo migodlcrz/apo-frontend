@@ -13,7 +13,7 @@ const Accordion: React.FC<AccordionProps> = ({ title, children }) => {
     <div className={`border-b border-gray-700 ${isOpen && "pb-4"}`}>
       {/* Header Section */}
       <button
-        className="w-full flex justify-between items-center py-3 px-4 text-[#292e3b] font-medium focus:outline-none"
+        className="w-full flex justify-between text-sm lg:text-xl items-center py-3 px-4 text-[#292e3b] font-medium focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
       >
         {title}

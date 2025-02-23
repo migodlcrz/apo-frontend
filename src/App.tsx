@@ -17,7 +17,7 @@ const App = () => {
 
 const AppContent = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-slate-200">
       <Navbar />
       <Routes>
         <Route path={"/"} element={<LandingPage />} />
