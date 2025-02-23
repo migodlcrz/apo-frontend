@@ -3,23 +3,36 @@ import Accordion from "../components/Accordion";
 const LandingPage = () => {
   return (
     <div id="Landing Page">
-      <div className="flex flex-col w-full items-center py-4 gap-4">
-        <div className="flex flex-col w-full items-center text-center">
-          <img src="/100-year.png" className="w-[80%] h-[80%]" />
-          <span className="text-blue-950 font-bold text-2xl">
-            APOAA-GNY Centennial Celebration
-          </span>
+      <div className="flex flex-col w-full items-center py-4 gap-4 lg:gap-10">
+        <div className="flex flex-col lg:flex-row gap-4">
+          <div className="flex flex-col w-full lg:w-1/2 items-center justify-center text-center">
+            <img src="/100-year.png" className="w-auto h-[80%]" />
+            <span className="text-blue-950 font-bold text-2xl lg:text-4xl">
+              APOAA-GNY Centennial Celebration
+            </span>
+          </div>
+          <div className="flex flex-col w-full lg:w-1/2 bg-[#034882] border-[#e8d794] border-y-2 items-center justify-center p-8">
+            <span className="text-white text-sm lg:text-xl text-justify">
+              Alpha Phi Omega's (APO) mission is to prepare college students to
+              be community and campus leaders through service and fellowship.
+              APO's vision is to be recognized as the top service-based
+              leadership development organization.
+            </span>
+
+            <video
+              src="/slideshow.mp4"
+              className="mt-4 w-full rounded-lg"
+              controls
+            >
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
-        <div className="flex flex-col w-full bg-[#292e3b] p-8">
-          <span className="text-white text-sm text-justify">
-            Alpha Phi Omega's (APO) mission is to prepare college students to be
-            community and campus leaders through service and fellowship. APO's
-            vision is to be recognized as the top service-based leadership
-            development organization.{" "}
-          </span>
-        </div>
+        {/* <div className="flex flex-col lg:flex-row-reverse gap-4"> */}
         <div className="flex flex-col w-full justify-center items-center px-8 gap-4 ">
-          <span className="text-[#292e3b] text-2xl font-bold">Mission</span>
+          <span className="text-[#292e3b] text-2xl lg:text-4xl font-bold">
+            Mission
+          </span>
           <ul className="">
             <Accordion title="Develop leadership skills">
               Leadership is not just about authority—it’s about inspiring
@@ -61,55 +74,66 @@ const LandingPage = () => {
             </Accordion>
           </ul>
         </div>
-        <div className="flex flex-col w-full justify-center bg-[#292e3b] items-center p-8 gap-4 ">
-          <span className="text-white text-2xl font-bold">Vision</span>
-          <ul className="flex flex-col gap-4 text-white">
-            <li className="text-white text-sm">
-              <span className="text-xl font-bold">1. </span>Be recognized as the
-              top service-based leadership development organization
+        <div className="flex flex-col w-full justify-center bg-[#034882] border-[#e8d794] border-y-2 items-center p-8 lg:py-16 gap-4 ">
+          <span className="text-white text-2xl lg:text-4xl font-bold">
+            Vision
+          </span>
+          <ul className="flex flex-col gap-4 text-white text-sm lg:text-xl">
+            <li>
+              <span className="text-xl lg:text-3xl font-bold">1. </span>Be
+              recognized as the top service-based leadership development
+              organization
             </li>
-            <li className="text-white text-sm">
+            <li>
               <span className="text-xl font-bold">2. </span>Create inclusive
               communities for a more peaceful world
             </li>
-            <li className="text-white text-sm">
+            <li>
               <span className="text-xl font-bold">3. </span>Values leadership,
               friendship, and service.
             </li>
-            <li className="text-white text-sm">
+            <li>
               <span className="text-xl font-bold">4. </span>Objectives Share,
               Grow, Improve, and Invest.{" "}
             </li>
           </ul>
         </div>
-        <div className="flex flex-col w-full justify-center items-center px-8 gap-4 ">
-          <span className="text-[#292e3b] text-2xl font-bold">Service</span>
-          <div className="flex flex-col w-full bg-[#292e3b] p-6 text-white text-sm text-justify gap-6">
-            <span>
-              APO members volunteer at many community service organizations,
-              including The Humane Society, Boys and Girls Club, and Habitat for
-              Humanity
+        {/* </div> */}
+
+        <div className="flex flex-col lg:flex-row gap-4">
+          <div className="flex flex-col w-full justify-center items-center px-8 gap-4 ">
+            <span className="text-[#292e3b] text-2xl lg:text-4xl font-bold">
+              Service
             </span>
-            <span>
-              APO also hosts events such as blood drives and run-a-thons
-            </span>
+            <div className="flex flex-col w-full h-full bg-[#034882] p-6 lg:p-10 text-white text-sm lg:text-xl text-justify gap-6">
+              <span>
+                APO members volunteer at many community service organizations,
+                including The Humane Society, Boys and Girls Club, and Habitat
+                for Humanity
+              </span>
+              <span>
+                APO also hosts events such as blood drives and run-a-thons
+              </span>
+            </div>
           </div>
-        </div>
-        <div className="flex flex-col w-full justify-center items-center px-8 gap-4 ">
-          <span className="text-[#292e3b] text-2xl font-bold">Fellowship</span>
-          <div className="flex flex-col w-full bg-[#292e3b] p-6 text-white text-sm text-justify gap-6">
-            <span>
-              APO members bond through activities such as movie nights, going to
-              the gym, and crafting
+          <div className="flex flex-col w-full justify-center items-center px-8 gap-4 ">
+            <span className="text-[#292e3b] text-2xl lg:text-4xl font-bold">
+              Fellowship
             </span>
-            <span>
-              APO encourages alumni brothers to become volunteers after
-              graduation
-            </span>
-            <span>
-              APO is a national co-ed fraternity that was derived from the Boy
-              Scouts of America.
-            </span>
+            <div className="flex flex-col w-full h-full bg-[#034882] p-6 lg:p-10 text-white text-sm lg:text-xl text-justify gap-6">
+              <span>
+                APO members bond through activities such as movie nights, going
+                to the gym, and crafting
+              </span>
+              <span>
+                APO encourages alumni brothers to become volunteers after
+                graduation
+              </span>
+              <span>
+                APO is a national co-ed fraternity that was derived from the Boy
+                Scouts of America.
+              </span>
+            </div>
           </div>
         </div>
       </div>

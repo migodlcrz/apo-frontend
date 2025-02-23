@@ -12,21 +12,49 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Fixed Navbar with Sliding Panel Inside */}
-      <div className="fixed top-0 left-0 w-full bg-[#292e3b] z-50 shadow-md">
-        {/* Navbar Content */}
+      {/* Fixed Navbar */}
+      <div className="fixed top-0 left-0 w-full bg-[#034882] border-[#e8d794] border-b-2 z-50 shadow-md">
         <div className="flex flex-row h-16 px-4 items-center justify-between">
-          <div className="flex items-center">
-            <h1 className="text-white font-bold">Alpha Phi Omega</h1>
-          </div>
-          <div className="flex items-center">
+          {/* Logo */}
+          <h1 className="text-white font-bold">Alpha Phi Omega</h1>
+
+          {/* Desktop Menu (Hidden on Small Screens) */}
+          <ul className="hidden lg:flex space-x-16 text-white font-medium">
+            <li
+              className="hover:text-[#e8d794] transition-colors duration-300 p-2 rounded cursor-pointer"
+              onClick={() => navigate("/")}
+            >
+              Home
+            </li>
+            <li
+              className="hover:text-[#e8d794] transition-colors duration-300 p-2 rounded cursor-pointer"
+              onClick={() => navigate("/events")}
+            >
+              Events
+            </li>
+            <li
+              className="hover:text-[#e8d794] transition-colors duration-300 p-2 rounded cursor-pointer"
+              onClick={() => navigate("/donate")}
+            >
+              Donate
+            </li>
+            <li
+              className="hover:text-[#e8d794] transition-colors duration-300 p-2 rounded cursor-pointer"
+              onClick={() => navigate("/raffle")}
+            >
+              Raffle
+            </li>
+          </ul>
+
+          {/* Mobile Hamburger Menu (Hidden on Large Screens) */}
+          <div className="lg:hidden">
             <Hamburger isOpen={isOpen} toggleMenu={toggleMenu} />
           </div>
         </div>
 
-        {/* Sliding Panel Inside Navbar */}
+        {/* Mobile Menu (Sliding Panel) */}
         <div
-          className={`w-full bg-[#1f2533] text-white shadow-md overflow-hidden transition-all duration-300 ease-in-out ${
+          className={`lg:hidden w-full bg-[#1f2533] text-white shadow-md overflow-hidden transition-all duration-300 ease-in-out ${
             isOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
           }`}
         >
@@ -34,7 +62,8 @@ const Navbar = () => {
             <li
               className="hover:bg-[#292e3b] p-2 rounded"
               onClick={() => {
-                setIsOpen(false), navigate("/");
+                setIsOpen(false);
+                navigate("/");
               }}
             >
               Home
@@ -42,7 +71,8 @@ const Navbar = () => {
             <li
               className="hover:bg-[#292e3b] p-2 rounded"
               onClick={() => {
-                setIsOpen(false), navigate("/events");
+                setIsOpen(false);
+                navigate("/events");
               }}
             >
               Events
@@ -50,7 +80,8 @@ const Navbar = () => {
             <li
               className="hover:bg-[#292e3b] p-2 rounded"
               onClick={() => {
-                setIsOpen(false), navigate("/donate");
+                setIsOpen(false);
+                navigate("/donate");
               }}
             >
               Donate
@@ -58,7 +89,8 @@ const Navbar = () => {
             <li
               className="hover:bg-[#292e3b] p-2 rounded"
               onClick={() => {
-                setIsOpen(false), navigate("/raffle");
+                setIsOpen(false);
+                navigate("/raffle");
               }}
             >
               Raffle
