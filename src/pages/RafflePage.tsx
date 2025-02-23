@@ -61,14 +61,20 @@ const RafflePage: React.FC = () => {
             onStopSpinning={() => {
               setSpinning(false);
               if (prizeNumber !== null && names.length > 1) {
-                setWinner(wheelData[prizeNumber].option);
+                const winnerName = wheelData[prizeNumber].option;
+                setWinner(winnerName);
+
+                // Remove the winner from the list
+                setNames((prevNames) =>
+                  prevNames.filter((name) => name !== winnerName)
+                );
               }
             }}
           />
         </div>
         {names.length <= 1 && (
           <span className="text-center text-gray-700">
-            Enter atleast two names to start raffle
+            Enter at least two names to start the raffle
           </span>
         )}
       </div>
