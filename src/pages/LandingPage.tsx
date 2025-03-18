@@ -3,15 +3,16 @@ import Accordion from "../components/Accordion";
 const LandingPage = () => {
   return (
     <div id="Landing Page">
-      <div className="flex flex-col w-full items-center py-4 gap-4 lg:gap-10">
+      <div className="flex flex-col w-full items-center gap-4 lg:gap-10">
+        <div className="flex flex-col w-full">hello</div>
         <div className="flex flex-col lg:flex-row gap-4">
           <div className="flex flex-col w-full lg:w-1/2 items-center justify-center text-center">
             <img src="/100-year.png" className="w-auto h-[80%]" />
-            <span className="text-blue-950 font-bold text-2xl lg:text-4xl">
+            <h1 className="text-blue-950 font-bold text-2xl lg:text-4xl">
               APOAA-GNY Centennial Celebration
-            </span>
+            </h1>
           </div>
-          <div className="flex flex-col w-full lg:w-1/2 bg-[#034882] border-[#e8d794] border-y-2 items-center justify-center p-8">
+          <div className="flex flex-col w-full lg:w-1/2 bg-[#292e3b] border-y-2 items-center justify-center p-8">
             <span className="text-white text-sm lg:text-xl text-justify">
               Alpha Phi Omega's (APO) mission is to prepare college students to
               be community and campus leaders through service and fellowship.
@@ -30,10 +31,10 @@ const LandingPage = () => {
         </div>
         {/* <div className="flex flex-col lg:flex-row-reverse gap-4"> */}
         <div className="flex flex-col w-full justify-center items-center px-8 gap-4 ">
-          <span className="text-[#292e3b] text-2xl lg:text-4xl font-bold">
+          <h1 className="text-[#292e3b] text-2xl lg:text-4xl font-bold">
             Mission
-          </span>
-          <ul className="">
+          </h1>
+          <ul className="flex flex-col w-full lg:w-1/2">
             <Accordion title="Develop leadership skills">
               Leadership is not just about authority—it’s about inspiring
               others, making tough decisions, and fostering growth. We aim to
@@ -74,10 +75,8 @@ const LandingPage = () => {
             </Accordion>
           </ul>
         </div>
-        <div className="flex flex-col w-full justify-center bg-[#034882] border-[#e8d794] border-y-2 items-center p-8 lg:py-16 gap-4 ">
-          <span className="text-white text-2xl lg:text-4xl font-bold">
-            Vision
-          </span>
+        <div className="flex flex-col w-full justify-center bg-[#292e3b] border-y-2 items-center p-8 lg:py-16 gap-4 ">
+          <h1 className="text-white text-2xl lg:text-4xl font-bold">Vision</h1>
           <ul className="flex flex-col gap-4 text-white text-sm lg:text-xl">
             <li>
               <span className="text-xl lg:text-3xl font-bold">1. </span>Be
@@ -102,10 +101,10 @@ const LandingPage = () => {
 
         <div className="flex flex-col lg:flex-row gap-4">
           <div className="flex flex-col w-full justify-center items-center px-8 gap-4 ">
-            <span className="text-[#292e3b] text-2xl lg:text-4xl font-bold">
+            <h1 className="text-[#292e3b] text-2xl lg:text-4xl font-bold">
               Service
-            </span>
-            <div className="flex flex-col w-full h-full bg-[#034882] p-6 lg:p-10 text-white text-sm lg:text-xl text-justify gap-6">
+            </h1>
+            <div className="flex flex-col w-full h-full bg-[#292e3b] p-6 lg:p-10 text-white text-sm lg:text-xl text-justify gap-6">
               <span>
                 APO members volunteer at many community service organizations,
                 including The Humane Society, Boys and Girls Club, and Habitat
@@ -117,10 +116,10 @@ const LandingPage = () => {
             </div>
           </div>
           <div className="flex flex-col w-full justify-center items-center px-8 gap-4 ">
-            <span className="text-[#292e3b] text-2xl lg:text-4xl font-bold">
+            <h1 className="text-[#292e3b] text-2xl lg:text-4xl font-bold">
               Fellowship
-            </span>
-            <div className="flex flex-col w-full h-full bg-[#034882] p-6 lg:p-10 text-white text-sm lg:text-xl text-justify gap-6">
+            </h1>
+            <div className="flex flex-col w-full h-full bg-[#292e3b] p-6 lg:p-10 text-white text-sm lg:text-xl text-justify gap-6">
               <span>
                 APO members bond through activities such as movie nights, going
                 to the gym, and crafting
