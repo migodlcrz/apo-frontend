@@ -155,7 +155,7 @@ const EventsPage: React.FC = () => {
         {/* <div className="flex flex-col w-1/2 p-8">
           <h1 className="text-white text-2xl font-bold">Upcoming events</h1>
         </div> */}
-        <div className="flex flex-col w-1/2 p-8 gap-4">
+        <div className="flex flex-col w-full lg:w-1/2 p-8 gap-4">
           <h1 className="text-white text-2xl font-bold">Past events</h1>
           <PastEvents events={pastEvents} />
         </div>
