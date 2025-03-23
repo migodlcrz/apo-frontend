@@ -32,7 +32,7 @@ const Accordion: React.FC<AccordionProps> = ({ title, children }) => {
           isOpen ? "max-h-40 opacity-100 p-4" : "max-h-0 opacity-0 p-0"
         }`}
       >
-        <div className="text-[#292e3b] text-sm font-normal text-justify">
+        <div className="text-[#292e3b] text-sm lg:text-lg font-normal text-justify">
           {children}
         </div>
       </div>

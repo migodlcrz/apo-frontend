@@ -16,7 +16,7 @@ const Navbar = () => {
       <div className="fixed top-0 left-0 w-full bg-[#282e3a] z-50 shadow-md">
         <div className="flex flex-row h-16 px-4 items-center justify-between">
           {/* Logo */}
-          <h1 className="text-white font-bold">Alpha Phi Omega</h1>
+          <h1 className="text-white font-bold text-xl">Alpha Phi Omega</h1>
 
           {/* Desktop Menu (Hidden on Small Screens) */}
           <ul className="hidden lg:flex space-x-16 text-white font-medium">
