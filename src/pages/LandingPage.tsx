@@ -67,13 +67,24 @@ const LandingPage = () => {
           <span className="text-[#292e3b] text-2xl lg:text-4xl font-bold">
             About
           </span>
-          <div className="flex flex-col lg:flex-row gap-4 items-center w-full lg:px-40">
-            <div className="flex flex-col w-full lg:w-full items-center justify-center p-8">
+          <div className="flex flex-col lg:flex-row items-center w-full px-4 lg:px-0">
+            <div className="flex flex-col w-full lg:w-1/2 items-center justify-center p-8 border-b-2 lg:border-r-2 lg:border-b-0">
               <span className="text-[#292e3b] text-sm lg:text-xl text-justify">
                 Alpha Phi Omega's (APO) mission is to prepare college students
                 to be community and campus leaders through service and
                 fellowship. APO's vision is to be recognized as the top
                 service-based leadership development organization.
+              </span>
+            </div>
+            <div className="flex flex-col w-full lg:w-1/2 p-8 text-center lg:text-start">
+              <span className="text-black font-bold text-3xl lg:text-5xl">
+                LEADERSHIP
+              </span>
+              <span className="text-black font-bold text-3xl lg:text-5xl">
+                FRIENDSHIP
+              </span>
+              <span className="text-black font-bold text-3xl lg:text-5xl">
+                SERVICE
               </span>
             </div>
           </div>
