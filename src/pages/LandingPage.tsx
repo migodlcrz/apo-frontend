@@ -13,7 +13,7 @@ const LandingPage = () => {
         />
         <div className="absolute inset-0 bg-opacity-50 flex flex-col items-center justify-center text-center px-6 lg:px-12 space-y-4">
           <span className="text-white text-3xl lg:text-6xl font-extrabold drop-shadow-lg">
-            Welcome to APOAA-GNY Centennial Celebration
+            Welcome to APOAA-GNY Ways and Means
           </span>
           <span className="text-white text-lg lg:text-3xl font-medium drop-shadow-lg max-w-3xl">
             Support Our Mission: Your Contribution Empowers Leadership, Service,
@@ -56,7 +56,7 @@ const LandingPage = () => {
         <div className="w-full lg:w-1/2 flex flex-col items-center justify-center text-center px-6">
           <img src="/100-year.png" className="w-auto h-[80%] mb-4" />
           <span className="text-[#282e3a] font-bold text-2xl lg:text-4xl">
-            APOAA-GNY Centennial Celebration
+            APOAA-GNY
           </span>
         </div>
       </div>
