@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Calendar from "../components/Calendar";
 import PastEvents from "../components/PastEvents";
+import EventsCarousel from "../components/EventsCarousel";
 
 const EventsPage: React.FC = () => {
   const today = new Date();
@@ -163,9 +164,13 @@ const EventsPage: React.FC = () => {
         {/* <div className="flex flex-col w-1/2 p-8">
           <h1 className="text-white text-2xl font-bold">Upcoming events</h1>
         </div> */}
-        <div className="flex flex-col w-full lg:w-1/2 p-8 gap-4">
+        {/* <div className="flex flex-col w-full lg:w-1/2 p-8 gap-4">
           <h1 className="text-white text-2xl font-bold">Past events</h1>
           <PastEvents events={pastEvents} />
+        </div> */}
+        <div className="flex flex-col items-center w-full p-6 gap-10">
+          <h1 className="text-white text-2xl font-bold">Past events</h1>
+          <EventsCarousel events={pastEvents} />
         </div>
       </div>
     </div>
