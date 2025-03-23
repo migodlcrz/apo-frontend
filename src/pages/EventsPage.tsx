@@ -56,6 +56,14 @@ const EventsPage: React.FC = () => {
     },
     {
       id: 5,
+      title: "APO Camping",
+      date: "June 2024",
+      description:
+        "An exciting outdoor adventure where members gathered to experience nature, build camaraderie, and strengthen bonds through various team-building activities, bonfires, and fellowship. The event fostered leadership, unity, and the spirit of brotherhood in a fun and relaxing setting.",
+      imageUrl: "/camping.jpg",
+    },
+    {
+      id: 6,
       title: "Quezon Day",
       date: "August 2024",
       description:
@@ -63,7 +71,7 @@ const EventsPage: React.FC = () => {
       imageUrl: "/quezon-day.jpg",
     },
     {
-      id: 6,
+      id: 7,
       title: "Adopt-A-Highway",
       date: "October 2024",
       description:
@@ -71,7 +79,7 @@ const EventsPage: React.FC = () => {
       imageUrl: "/adopt.JPG",
     },
     {
-      id: 7,
+      id: 8,
       title: "Election of Officers",
       date: "October 2024",
       description:
@@ -79,7 +87,7 @@ const EventsPage: React.FC = () => {
       imageUrl: "/elect.JPG",
     },
     {
-      id: 8,
+      id: 9,
       title: "Halloween",
       date: "October 2024",
       description:
@@ -87,7 +95,7 @@ const EventsPage: React.FC = () => {
       imageUrl: "/halloween.JPG",
     },
     {
-      id: 9,
+      id: 10,
       title: "Breast Cancer Walk",
       date: "October 2024",
       description:
@@ -95,7 +103,7 @@ const EventsPage: React.FC = () => {
       imageUrl: "/breast-cancer.jpg",
     },
     {
-      id: 10,
+      id: 11,
       title: "Boat Ride for 'God’s Special Children'",
       date: "October 2024",
       description:
@@ -103,7 +111,7 @@ const EventsPage: React.FC = () => {
       imageUrl: "/boat-ride.jpg",
     },
     {
-      id: 11,
+      id: 12,
       title: "NYC Marathon",
       date: "November 2024",
       description:
