@@ -28,6 +28,15 @@ const LandingPage = () => {
             Donate Now
           </button>
         </div>
+        <div className="flex bg-[#282e3a] px-10 py-5">
+          <span className="text-white text-justify lg:text-lg text-sm">
+            Notice: A portion of the funds raised from the APO Camping event
+            will go toward supporting APO’s Centennial Celebration. Your
+            participation not only fosters camaraderie and leadership but also
+            contributes to making this historic milestone a grand and memorable
+            occasion. Thank you for your support!
+          </span>
+        </div>
       </div>
 
       {/* Slideshow & Logo Section */}
