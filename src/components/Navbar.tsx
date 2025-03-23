@@ -78,6 +78,15 @@ const Navbar = () => {
               className="hover:bg-[#292e3b] p-2 rounded"
               onClick={() => {
                 setIsOpen(false);
+                navigate("/donate");
+              }}
+            >
+              Donate
+            </li>
+            <li
+              className="hover:bg-[#292e3b] p-2 rounded"
+              onClick={() => {
+                setIsOpen(false);
                 navigate("/events");
               }}
             >
@@ -87,10 +96,10 @@ const Navbar = () => {
               className="hover:bg-[#292e3b] p-2 rounded"
               onClick={() => {
                 setIsOpen(false);
-                navigate("/donate");
+                navigate("/store");
               }}
             >
-              Donate
+              Store
             </li>
             <li
               className="hover:bg-[#292e3b] p-2 rounded"

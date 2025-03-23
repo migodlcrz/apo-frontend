@@ -31,7 +31,7 @@ const LandingPage = () => {
       </div>
 
       {/* Slideshow & Logo Section */}
-      <div className="flex flex-col lg:flex-row w-full items-center justify-center py-10 bg-white">
+      <div className="flex flex-col-reverse gap-10 lg:gap-none lg:flex-row w-full items-center justify-center py-10 bg-white">
         {/* Slideshow */}
         <div className="w-full lg:w-1/2 px-6">
           <video
@@ -58,7 +58,7 @@ const LandingPage = () => {
           <span className="text-[#292e3b] text-2xl lg:text-4xl font-bold">
             About
           </span>
-          <div className="flex flex-col lg:flex-row gap-4 items-center w-full px-40">
+          <div className="flex flex-col lg:flex-row gap-4 items-center w-full lg:px-40">
             <div className="flex flex-col w-full lg:w-full items-center justify-center p-8">
               <span className="text-[#292e3b] text-sm lg:text-xl text-justify">
                 Alpha Phi Omega's (APO) mission is to prepare college students
