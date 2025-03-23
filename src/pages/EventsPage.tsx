@@ -98,7 +98,7 @@ const EventsPage: React.FC = () => {
       </div>
 
       {/* Upcoming & Past Events Section */}
-      <div className="flex flex-col lg:flex-row border-t-2 border-[#e8d794] bg-[#034882]">
+      <div className="flex flex-col lg:flex-row bg-[#282e3a]">
         <div className="flex flex-col w-1/2 p-8">
           <h1 className="text-white text-2xl font-bold">Upcoming events</h1>
         </div>

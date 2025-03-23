@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <>
       {/* Fixed Navbar */}
-      <div className="fixed top-0 left-0 w-full bg-[#034882] border-[#e8d794] border-b-2 z-50 shadow-md">
+      <div className="fixed top-0 left-0 w-full bg-[#282e3a] z-50 shadow-md">
         <div className="flex flex-row h-16 px-4 items-center justify-between">
           {/* Logo */}
           <h1 className="text-white font-bold">Alpha Phi Omega</h1>
@@ -28,15 +28,21 @@ const Navbar = () => {
             </li>
             <li
               className="hover:text-[#e8d794] transition-colors duration-300 p-2 rounded cursor-pointer"
+              onClick={() => navigate("/donate")}
+            >
+              Donate
+            </li>
+            <li
+              className="hover:text-[#e8d794] transition-colors duration-300 p-2 rounded cursor-pointer"
               onClick={() => navigate("/events")}
             >
               Events
             </li>
             <li
               className="hover:text-[#e8d794] transition-colors duration-300 p-2 rounded cursor-pointer"
-              onClick={() => navigate("/donate")}
+              onClick={() => navigate("/store")}
             >
-              Donate
+              Store
             </li>
             <li
               className="hover:text-[#e8d794] transition-colors duration-300 p-2 rounded cursor-pointer"
