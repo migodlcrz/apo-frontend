@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Wheel } from "react-custom-roulette";
+import Confetti from "react-confetti";
+import { useWindowSize } from "react-use";
 
 const RafflePage: React.FC = () => {
   const [names, setNames] = useState<string[]>([]);
@@ -7,14 +9,14 @@ const RafflePage: React.FC = () => {
   const [spinning, setSpinning] = useState<boolean>(false);
   const [prizeNumber, setPrizeNumber] = useState<number | null>(null);
   const [winner, setWinner] = useState<string | null>(null);
+  const [showConfetti, setShowConfetti] = useState<boolean>(false);
+  const { width, height } = useWindowSize();
 
-  // Default segment when no names are added
   const wheelData =
     names.length > 0
       ? names.map((name) => ({ option: name }))
       : [{ option: "" }];
 
-  // Handle adding names from textarea
   const addNames = () => {
     const newNames = inputText
       .split("\n")
@@ -26,7 +28,6 @@ const RafflePage: React.FC = () => {
     setInputText("");
   };
 
-  // Handle spinning the wheel
   const spinWheel = () => {
     if (names.length > 1) {
       const newPrizeNumber = Math.floor(Math.random() * names.length);
@@ -36,13 +37,16 @@ const RafflePage: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row items-center p-8">
+    <div className="flex flex-col lg:flex-row items-center p-8 relative">
+      {showConfetti && (
+        <Confetti width={width} height={height} numberOfPieces={300} />
+      )}
+
       <div className="flex flex-col w-1/2 h-full items-center">
         <h1 className="text-2xl font-bold mb-4 text-center">
           Spin the Wheel Raffle
         </h1>
 
-        {/* Wheel Container */}
         <div
           className={`flex flex-col items-center p-8 ${
             names.length < 2 ? "grayscale opacity-50" : ""
@@ -63,8 +67,9 @@ const RafflePage: React.FC = () => {
               if (prizeNumber !== null && names.length > 1) {
                 const winnerName = wheelData[prizeNumber].option;
                 setWinner(winnerName);
+                setShowConfetti(true);
+                setTimeout(() => setShowConfetti(false), 5000);
 
-                // Remove the winner from the list
                 setNames((prevNames) =>
                   prevNames.filter((name) => name !== winnerName)
                 );
@@ -80,14 +85,12 @@ const RafflePage: React.FC = () => {
       </div>
 
       <div className="flex flex-col w-full lg:w-1/2 h-full items-center">
-        {/* Winner Announcement */}
         {winner && (
           <h2 className="text-xl font-bold text-green-500 mt-4">
             Winner: {winner}
           </h2>
         )}
 
-        {/* Textarea Input for Multiple Names */}
         <div className="mt-6 w-full max-w-md">
           <textarea
             value={inputText}
@@ -103,7 +106,6 @@ const RafflePage: React.FC = () => {
           </button>
         </div>
 
-        {/* Spin Button */}
         <button
           onClick={spinWheel}
           className="mt-4 bg-green-500 text-white px-6 py-2 rounded disabled:bg-gray-400"
