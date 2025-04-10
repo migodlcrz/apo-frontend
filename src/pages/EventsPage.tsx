@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Calendar from "../components/Calendar";
-import PastEvents from "../components/PastEvents";
 import EventsCarousel from "../components/EventsCarousel";
 
 const EventsPage: React.FC = () => {
