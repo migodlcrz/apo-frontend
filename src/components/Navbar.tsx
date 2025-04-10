@@ -16,7 +16,10 @@ const Navbar = () => {
       <div className="fixed top-0 left-0 w-full bg-[#282e3a] z-50 shadow-md">
         <div className="flex flex-row h-16 px-4 items-center justify-between">
           {/* Logo */}
-          <h1 className="text-white font-bold text-xl">Alpha Phi Omega</h1>
+          <div className="flex flex-row gap-2">
+            <img src="/100-year.png" className="w-auto h-8" />
+            <h1 className="text-white font-bold text-xl">Alpha Phi Omega</h1>
+          </div>
 
           {/* Desktop Menu (Hidden on Small Screens) */}
           <ul className="hidden lg:flex space-x-16 text-white font-medium">
@@ -25,6 +28,18 @@ const Navbar = () => {
               onClick={() => navigate("/")}
             >
               Home
+            </li>
+            <li
+              className="hover:text-[#e8d794] transition-colors duration-300 p-2 rounded cursor-pointer"
+              onClick={() => navigate("/centennial")}
+            >
+              Centennial
+            </li>
+            <li
+              className="hover:text-[#e8d794] transition-colors duration-300 p-2 rounded cursor-pointer"
+              onClick={() => navigate("/leadership")}
+            >
+              Leadership
             </li>
             <li
               className="hover:text-[#e8d794] transition-colors duration-300 p-2 rounded cursor-pointer"
@@ -61,7 +76,7 @@ const Navbar = () => {
         {/* Mobile Menu (Sliding Panel) */}
         <div
           className={`lg:hidden w-full bg-[#1f2533] text-white shadow-md overflow-hidden transition-all duration-300 ease-in-out ${
-            isOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
+            isOpen ? "max-h-92 opacity-100" : "max-h-0 opacity-0"
           }`}
         >
           <ul className="p-4 space-y-2">
@@ -73,6 +88,24 @@ const Navbar = () => {
               }}
             >
               Home
+            </li>
+            <li
+              className="hover:bg-[#292e3b] p-2 rounded"
+              onClick={() => {
+                setIsOpen(false);
+                navigate("/centennial");
+              }}
+            >
+              Centennial
+            </li>
+            <li
+              className="hover:bg-[#292e3b] p-2 rounded"
+              onClick={() => {
+                setIsOpen(false);
+                navigate("/leadership");
+              }}
+            >
+              Leadership
             </li>
             <li
               className="hover:bg-[#292e3b] p-2 rounded"

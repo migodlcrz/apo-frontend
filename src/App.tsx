@@ -7,6 +7,8 @@ import DonationPage from "./pages/DonationPage";
 import RafflePage from "./pages/RafflePage";
 import Navbar from "./components/Navbar";
 import StorePage from "./pages/StorePage";
+import CentennialPage from "./pages/CentennialPage";
+import LeadershipPage from "./pages/LeadershipPage";
 
 const App = () => {
   return (
@@ -22,6 +24,8 @@ const AppContent = () => {
       <Navbar />
       <Routes>
         <Route path={"/"} element={<LandingPage />} />
+        <Route path={"/centennial"} element={<CentennialPage />} />
+        <Route path={"/leadership"} element={<LeadershipPage />} />
         <Route path={"/donate"} element={<DonationPage />} />
         <Route path={"/events"} element={<EventsPage />} />
         <Route path={"/store"} element={<StorePage />} />
