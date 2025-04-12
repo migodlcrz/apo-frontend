@@ -21,25 +21,25 @@ const LandingPage = () => {
   };
 
   return (
-    <div id="Landing Page" className="flex flex-col gap-10 pb-10">
+    <div id="Landing Page" className="flex flex-col gap-10 pb-10 w-full">
       <div className="flex flex-col lg:px-40">
         <div className="flex flex-col items-start justify-center p-10 pt-20 lg:px-12 space-y-10">
           <div className="flex flex-col w-full text-start gap-10">
             <Tag mode="light">APO AAGNY</Tag>
-            <span className="text-black text-3xl lg:text-6xl font-extrabold drop-shadow-lg w-11/12 lg:w-full">
+            <span className="flex text-black text-3xl  lg:text-6xl font-extrabold drop-shadow-lg w-full text-center items-center lg:text-start lg:items-start">
               Come celebrate 100 years of Alpha Phi Omega!
             </span>
-            <div className="flex flex-col w-full">
-              <span className="text-gray-500 text-lg lg:text-2xl font-medium drop-shadow-lg w-9/12 lg:w-full">
+            <div className="flex flex-col w-full gap-2 text-center justify-center items-center lg:items-start lg:text-start">
+              <span className="text-gray-500 text-md lg:text-2xl font-medium drop-shadow-lg w-9/12 lg:w-full">
                 Join us for an unforgettable Centennial Celebration on December
                 14-16 2025, hosted by APOAA Greater New York
               </span>
-              <span className="text-gray-500 text-lg lg:text-2xl font-medium drop-shadow-lg w-9/12 lg:w-full">
+              <span className="text-gray-500 text-md lg:text-2xl font-medium drop-shadow-lg w-9/12 lg:w-full">
                 Let's honor a century of Leadership, Friendship, and Service
                 together!
               </span>
             </div>
-            <div className="flex flex-row gap-2">
+            <div className="flex flex-row gap-2 w-full justify-center lg:justify-start">
               <button
                 className="bg-[#282e3a] text-white font-bold text-md lg:text-xl py-2 lg:py-3 px-6 lg:x-8 rounded-lg transition hover:bg-[#1e2025]"
                 onClick={handleScrolltoCentennial}
