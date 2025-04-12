@@ -9,36 +9,42 @@ import { useRef } from "react";
 
 const LandingPage = () => {
   const aboutRef = useRef<HTMLDivElement>(null);
+  const centennialRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
 
   const handleScrollToAbout = () => {
     aboutRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const handleScrolltoCentennial = () => {
+    centennialRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div id="Landing Page" className="flex flex-col gap-10 pb-10">
       <div className="flex flex-col lg:px-40">
         <div className="flex flex-col items-start justify-center p-10 pt-20 lg:px-12 space-y-10">
-          <div className="flex flex-col w-full text-start gap-4">
+          <div className="flex flex-col w-full text-start gap-10">
             <Tag mode="light">APO AAGNY</Tag>
             <span className="text-black text-3xl lg:text-6xl font-extrabold drop-shadow-lg w-11/12 lg:w-full">
-              United in Service, Bound by Brotherhood
+              Come celebrate 100 years of Alpha Phi Omega!
             </span>
-            <span className="text-gray-500 text-lg lg:text-2xl font-medium drop-shadow-lg w-9/12 lg:w-full">
-              At Alpha Phi Omega – AAGNY, we uplift communities through selfless
-              leadership, shared purpose, and lifelong bonds of friendship.
-            </span>
+            <div className="flex flex-col w-full">
+              <span className="text-gray-500 text-lg lg:text-2xl font-medium drop-shadow-lg w-9/12 lg:w-full">
+                Join us for an unforgettable Centennial Celebration on December
+                14-16 2025, hosted by APOAA Greater New York
+              </span>
+              <span className="text-gray-500 text-lg lg:text-2xl font-medium drop-shadow-lg w-9/12 lg:w-full">
+                Let's honor a century of Leadership, Friendship, and Service
+                together!
+              </span>
+            </div>
             <div className="flex flex-row gap-2">
               <button
                 className="bg-[#282e3a] text-white font-bold text-md lg:text-xl py-2 lg:py-3 px-6 lg:x-8 rounded-lg transition hover:bg-[#1e2025]"
-                onClick={() =>
-                  window.open(
-                    "https://www.apoaagny.org/profile/my/profile",
-                    "_blank"
-                  )
-                }
+                onClick={handleScrolltoCentennial}
               >
-                Register Now
+                See details
               </button>
               <button
                 className="bg-white text-[#282e3a] font-bold text-md lg:text-xl py-2 lg:py-3 px-6 lg:px-8 rounded-lg transition hover:bg-slate-100 border-[0.1px] border-[#282e3a]"
@@ -67,7 +73,10 @@ const LandingPage = () => {
       </div>
 
       {/* Slideshow & Logo Section */}
-      <div className="flex flex-col gap-2 lg:gap-10 w-full items-center justify-center py-10 bg-slate-100 lg:px-40">
+      <div
+        ref={centennialRef}
+        className="flex flex-col gap-2 lg:gap-10 w-full items-center justify-center py-10 bg-slate-100 lg:px-40"
+      >
         {/* Slideshow */}
         <div className="flex flex-col justify-center items-center gap-2">
           <Tag mode="dark">Special Announcement</Tag>
@@ -119,9 +128,9 @@ const LandingPage = () => {
         </div>
 
         {/* Logo & Text */}
-        <div className="w-full lg:w-1/2 flex flex-col items-center justify-center text-center px-6">
+        <div className="w-fit lg:w-1/2 flex flex-col items-center justify-center text-center p-6 bg-[#282e3a]">
           <img src="/100-year.png" className="w-auto h-[80%] mb-4" />
-          <span className="text-[#282e3a] font-bold text-2xl lg:text-4xl">
+          <span className="text-white font-bold text-2xl lg:text-4xl">
             APOAA-GNY
           </span>
         </div>
