@@ -82,17 +82,25 @@ const BodPanel = () => {
             <h2 className="text-[#0c238a] font-bold">{member.name}</h2>
 
             {member.description && (
-              <p className="text-gray-700 mt-1 text-justify">
-                {member.description}
-              </p>
+              <div className="border-t border-gray-300 pt-2 mt-2">
+                <p className="text-gray-700 text-justify">
+                  {member.description}
+                </p>
+              </div>
             )}
+
             {member.batch && (
-              <p className="text-gray-700 mt-1">{member.batch}</p>
+              <div className="border-t border-gray-300 pt-2 mt-2">
+                <p className="text-gray-700">{member.batch}</p>
+              </div>
             )}
+
             {member.chapter && (
-              <p className="text-gray-700 mt-1 whitespace-pre-line">
-                {member.chapter}
-              </p>
+              <div className="border-t border-gray-300 pt-2 mt-2">
+                <p className="text-gray-700 whitespace-pre-line">
+                  {member.chapter}
+                </p>
+              </div>
             )}
           </div>
         </div>
