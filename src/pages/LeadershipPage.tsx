@@ -1,4 +1,6 @@
 import { useState } from "react";
+import ExecomPanel from "../components/ExecomPanel";
+import BodPanel from "../components/BodPanel";
 
 const LeadershipPage = () => {
   const [activeTab, setActiveTab] = useState<"executive" | "board">(
@@ -47,18 +49,14 @@ const LeadershipPage = () => {
       {/* Content */}
       <div className="w-full px-4 lg:px-40 mt-8 transition-all duration-500">
         {activeTab === "executive" ? (
-          <div className="bg-white rounded-lg p-6 shadow-md transition-opacity duration-300 opacity-100">
+          <div className="flex flex-col w-full bg-white rounded-lg p-6 shadow-md transition-opacity duration-300 opacity-100">
             <h2 className="text-2xl font-bold mb-4">Executive Committee</h2>
-            <p className="text-gray-700">
-              Details about the Executive Committee go here...
-            </p>
+            <ExecomPanel />
           </div>
         ) : (
-          <div className="bg-white rounded-lg p-6 shadow-md transition-opacity duration-300 opacity-100">
+          <div className="flex flex-col w-full bg-white rounded-lg p-6 shadow-md transition-opacity duration-300 opacity-100">
             <h2 className="text-2xl font-bold mb-4">Board of Directors</h2>
-            <p className="text-gray-700">
-              Details about the Board of Directors go here...
-            </p>
+            <BodPanel />
           </div>
         )}
       </div>
