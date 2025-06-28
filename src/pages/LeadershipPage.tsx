@@ -24,9 +24,9 @@ const LeadershipPage = () => {
       <div className="flex flex-col w-full px-2 lg:px-40">
         <div className="flex flex-row w-full bg-slate-100 rounded-lg overflow-hidden p-1">
           <button
-            className={`w-1/2 py-2 transition-all duration-300 font-semibold ${
+            className={`w-1/2 py-2 transition-all duration-300 font-semibold hover:cursor-pointer ${
               activeTab === "executive"
-                ? "bg-white text-black shadow"
+                ? "bg-[#282e3a] text-white shadow"
                 : "bg-slate-100 text-slate-500"
             }`}
             onClick={() => setActiveTab("executive")}
@@ -34,9 +34,9 @@ const LeadershipPage = () => {
             Executive Committee
           </button>
           <button
-            className={`w-1/2 py-2 transition-all duration-300 font-semibold ${
+            className={`w-1/2 py-2 transition-all duration-300 font-semibold hover:cursor-pointer ${
               activeTab === "board"
-                ? "bg-white text-black shadow"
+                ? "bg-[#282e3a] text-white shadow"
                 : "bg-slate-100 text-slate-500"
             }`}
             onClick={() => setActiveTab("board")}
