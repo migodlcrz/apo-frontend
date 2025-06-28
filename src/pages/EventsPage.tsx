@@ -139,14 +139,14 @@ const EventsPage: React.FC = () => {
           <div>
             <span className="text-4xl font-semibold">Upcoming Events:</span>
             <ul className="mt-4 list-disc list-inside text-lg text-gray-700">
-              <li>March 2025 - Virtual Spin the Wheel</li>
-              <li>April 2025 - Virtual Fun Run</li>
-              <li>May 2025 - Bingo Online/Bowling</li>
+              <li>July 04 2025 - July 06 2025 - GNY Camping - Wildwood</li>
+              <li>August 23 2025 - Adopt A Hwy & GMM - NJ</li>
+              {/* <li>May 2025 - Bingo Online/Bowling</li>
               <li>June 2025 - Filipino Parade (Sell)</li>
               <li>July 2025 - Fun Run</li>
               <li>August 2025 - Virtual Spin the Wheel</li>
               <li>September 2025 - Bingo Online</li>
-              <li>October 2025 - Virtual Spin the Wheel</li>
+              <li>October 2025 - Virtual Spin the Wheel</li> */}
             </ul>
           </div>
         </div>
