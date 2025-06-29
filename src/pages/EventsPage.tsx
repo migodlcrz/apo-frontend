@@ -134,7 +134,20 @@ const EventsPage: React.FC = () => {
     {
       title: "Anniv/Xmas Party",
       date: "Dec 15-17, 2024",
-      images: ["/xmas1.jpg", "/xmas2.jpg", "/xmas3.jpg", "/xmas4.jpg"],
+      images: [
+        "/more-photos/anniv-xmas-party/photo-1.jpeg",
+        "/more-photos/anniv-xmas-party/photo-2.jpeg",
+        "/more-photos/anniv-xmas-party/photo-3.jpeg",
+        "/more-photos/anniv-xmas-party/photo-4.jpeg",
+        "/more-photos/anniv-xmas-party/photo-5.jpeg",
+        "/more-photos/anniv-xmas-party/photo-6.jpeg",
+        "/more-photos/anniv-xmas-party/photo-7.jpeg",
+        "/more-photos/anniv-xmas-party/photo-8.jpeg",
+        "/more-photos/anniv-xmas-party/photo-9.jpeg",
+        "/more-photos/anniv-xmas-party/photo-10.jpeg",
+        "/more-photos/anniv-xmas-party/photo-11.jpeg",
+        "/more-photos/anniv-xmas-party/photo-12.jpeg",
+      ],
     },
     {
       title: "2025 1st GMM",
