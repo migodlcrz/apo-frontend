@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
 import LearnMoreModal from "./LearnMoreModal";
 

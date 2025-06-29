@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import Accordion from "../components/Accordion";
 import Tag from "../components/Tag";
 import { IoTrophy } from "react-icons/io5";
 import Card from "../components/Card";
