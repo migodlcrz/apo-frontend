@@ -120,6 +120,42 @@ const EventsPage: React.FC = () => {
     },
   ];
 
+  const morePhotos = [
+    {
+      title: "Easter 2024",
+      date: "Apr 1-2, 2024",
+      images: ["/easter1.jpg", "/easter2.jpg", "/easter3.jpg"],
+    },
+    {
+      title: "Adopt a Hwy",
+      date: "May 4-5, 2024",
+      images: ["/adopt1.jpg", "/adopt2.jpg"],
+    },
+    {
+      title: "Anniv/Xmas Party",
+      date: "Dec 15-17, 2024",
+      images: ["/xmas1.jpg", "/xmas2.jpg", "/xmas3.jpg", "/xmas4.jpg"],
+    },
+    {
+      title: "2025 1st GMM",
+      date: "Jan 19-20, 2025",
+      images: [
+        "/more-photos/first-gmm/photo-1.jpeg",
+        "/more-photos/first-gmm/photo-2.jpeg",
+        "/more-photos/first-gmm/photo-3.jpeg",
+        "/more-photos/first-gmm/photo-4.jpeg",
+        "/more-photos/first-gmm/photo-5.jpeg",
+        "/more-photos/first-gmm/photo-6.jpeg",
+        "/more-photos/first-gmm/photo-7.jpeg",
+        "/more-photos/first-gmm/photo-8.png",
+        "/more-photos/first-gmm/photo-9.jpeg",
+        "/more-photos/first-gmm/photo-10.jpeg",
+        "/more-photos/first-gmm/photo-11.jpeg",
+        "/more-photos/first-gmm/photo-12.jpeg",
+      ],
+    },
+  ];
+
   return (
     <div className="flex flex-col">
       <div className="flex flex-col lg:flex-row p-8 gap-8 lg:gap-0">
@@ -170,6 +206,27 @@ const EventsPage: React.FC = () => {
         <div className="flex flex-col items-center w-full p-6 gap-10">
           <h1 className="text-white text-2xl font-bold">Past events</h1>
           <EventsCarousel events={pastEvents} />
+          {/* More Photos Section */}
+          <div className="w-full max-w-screen-xl px-4 pb-12 flex flex-col gap-12">
+            {morePhotos.map((section, index) => (
+              <div key={index}>
+                <h2 className="text-2xl font-bold text-white mb-4">
+                  {section.title} ({section.date})
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                  {section.images.map((src, imgIndex) => (
+                    <img
+                      key={imgIndex}
+                      src={src}
+                      alt={`${section.title} ${imgIndex + 1}`}
+                      className="rounded-xl shadow-md"
+                      loading="lazy"
+                    />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
