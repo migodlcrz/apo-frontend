@@ -124,12 +124,34 @@ const EventsPage: React.FC = () => {
     {
       title: "Easter 2024",
       date: "Apr 1-2, 2024",
-      images: ["/easter1.jpg", "/easter2.jpg", "/easter3.jpg"],
+      images: [
+        "/more-photos/easter/photo-1.jpeg",
+        "/more-photos/easter/photo-2.jpeg",
+        "/more-photos/easter/photo-4.jpeg",
+        "/more-photos/easter/photo-5.jpeg",
+        "/more-photos/easter/photo-6.jpeg",
+        "/more-photos/easter/photo-8.jpeg",
+        "/more-photos/easter/photo-7.jpeg",
+        "/more-photos/easter/photo-3.jpeg",
+      ],
     },
     {
       title: "Adopt a Hwy",
       date: "May 4-5, 2024",
-      images: ["/adopt1.jpg", "/adopt2.jpg"],
+      images: [
+        "more-photos/adopt-a-hwy/photo-1.jpeg",
+        "/more-photos/adopt-a-hwy/photo-2.jpeg",
+        "/more-photos/adopt-a-hwy/photo-3.jpeg",
+        "/more-photos/adopt-a-hwy/photo-4.jpeg",
+        "/more-photos/adopt-a-hwy/photo-5.jpeg",
+        "/more-photos/adopt-a-hwy/photo-6.jpeg",
+        "/more-photos/adopt-a-hwy/photo-7.jpeg",
+        "/more-photos/adopt-a-hwy/photo-8.jpeg",
+        "/more-photos/adopt-a-hwy/photo-9.jpeg",
+        "/more-photos/adopt-a-hwy/photo-10.jpeg",
+        "/more-photos/adopt-a-hwy/photo-11.jpeg",
+        "/more-photos/adopt-a-hwy/photo-12.jpeg",
+      ],
     },
     {
       title: "Anniv/Xmas Party",
@@ -220,10 +242,10 @@ const EventsPage: React.FC = () => {
           <h1 className="text-white text-2xl font-bold">Past events</h1>
           <EventsCarousel events={pastEvents} />
           {/* More Photos Section */}
-          <div className="w-full max-w-screen-xl px-4 pb-12 flex flex-col gap-12">
+          <div className="w-full max-w-screen-xl px-4 pb-12 flex flex-col gap-12 text-center">
             {morePhotos.map((section, index) => (
-              <div key={index}>
-                <h2 className="text-2xl font-bold text-white mb-4">
+              <div className="flex w-full flex-col gap-6" key={index}>
+                <h2 className="text-2xl lg:text-4xl font-bold text-white mb-4">
                   {section.title} ({section.date})
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
