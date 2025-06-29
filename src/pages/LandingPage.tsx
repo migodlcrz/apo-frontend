@@ -62,7 +62,7 @@ const LandingPage = () => {
               alt="Main Landing"
             /> */}
             <video
-              src="/teaser.mp4"
+              src="/teaser-1.mp4"
               className="w-full lg:w-2/3 rounded-lg shadow-lg"
               controls
             >
@@ -117,15 +117,6 @@ const LandingPage = () => {
             <img src="/centennial-register.PNG" alt="" />
           </div>
         </div>
-        <div className="w-full lg:w-1/2 px-6">
-          <video
-            src="/slideshow.mp4"
-            className="w-full rounded-lg shadow-lg"
-            controls
-          >
-            Your browser does not support the video tag.
-          </video>
-        </div>
 
         {/* Logo & Text */}
         <div className="w-fit lg:w-1/2 flex flex-col items-center justify-center text-center p-6 bg-[#282e3a]">
@@ -137,7 +128,7 @@ const LandingPage = () => {
       </div>
 
       {/* Mission Section */}
-      <div
+      {/* <div
         ref={aboutRef}
         className="flex flex-col w-full items-center py-4 gap-4 lg:gap-10 lg:px-40"
       >
@@ -180,10 +171,10 @@ const LandingPage = () => {
             </Accordion>
           </ul>
         </div>
-      </div>
+      </div> */}
 
       {/* Vision Section */}
-      <div className="flex flex-col w-full justify-center bg-slate-100 items-center p-8 lg:py-16 gap-4 lg:px-40">
+      <div className="flex flex-col w-full justify-center bg-white items-center p-8 lg:py-16 gap-4 lg:px-40">
         <Tag mode="light">Our Vision</Tag>
         <span className="text-xl lg:text-6xl font-bold">A Better Tomorrow</span>
         <div className="flex flex-col w-full items-center justify-center px-6">
@@ -224,7 +215,7 @@ const LandingPage = () => {
       </div>
 
       {/* Service & Fellowship Sections */}
-      <div className="flex flex-col lg:flex-row gap-4">
+      <div className="flex flex-col lg:flex-row gap-4 bg-slate-100 py-10">
         <div className="flex flex-col w-full justify-start items-start px-8 gap-4">
           <Tag mode="light">Service</Tag>
           <span className="text-xl lg:text-4xl font-bold">
@@ -239,9 +230,7 @@ const LandingPage = () => {
           </span>
           <div className="flex flex-col w-full h-full bg-slate-200 p-6 lg:p-10 text-white text-sm lg:text-xl text-justify gap-6 mt-8 rounded-lg shadow-lg">
             <span className="text-black">
-              APO members volunteer at many community service organizations,
-              including The Humane Society, Boys and Girls Club, and Habitat for
-              Humanity.
+              APO members volunteer at many community service organizations
             </span>
             <span className="text-black">
               APO also hosts events such as blood drives and run-a-thons.

@@ -1,4 +1,6 @@
 import { useState } from "react";
+import ExecomPanel from "../components/ExecomPanel";
+import BodPanel from "../components/BodPanel";
 
 const LeadershipPage = () => {
   const [activeTab, setActiveTab] = useState<"executive" | "board">(
@@ -22,9 +24,9 @@ const LeadershipPage = () => {
       <div className="flex flex-col w-full px-2 lg:px-40">
         <div className="flex flex-row w-full bg-slate-100 rounded-lg overflow-hidden p-1">
           <button
-            className={`w-1/2 py-2 transition-all duration-300 font-semibold ${
+            className={`w-1/2 py-2 transition-all duration-300 font-semibold hover:cursor-pointer ${
               activeTab === "executive"
-                ? "bg-white text-black shadow"
+                ? "bg-[#282e3a] text-white shadow"
                 : "bg-slate-100 text-slate-500"
             }`}
             onClick={() => setActiveTab("executive")}
@@ -32,9 +34,9 @@ const LeadershipPage = () => {
             Executive Committee
           </button>
           <button
-            className={`w-1/2 py-2 transition-all duration-300 font-semibold ${
+            className={`w-1/2 py-2 transition-all duration-300 font-semibold hover:cursor-pointer ${
               activeTab === "board"
-                ? "bg-white text-black shadow"
+                ? "bg-[#282e3a] text-white shadow"
                 : "bg-slate-100 text-slate-500"
             }`}
             onClick={() => setActiveTab("board")}
@@ -47,18 +49,18 @@ const LeadershipPage = () => {
       {/* Content */}
       <div className="w-full px-4 lg:px-40 mt-8 transition-all duration-500">
         {activeTab === "executive" ? (
-          <div className="bg-white rounded-lg p-6 shadow-md transition-opacity duration-300 opacity-100">
-            <h2 className="text-2xl font-bold mb-4">Executive Committee</h2>
-            <p className="text-gray-700">
-              Details about the Executive Committee go here...
-            </p>
+          <div className="flex flex-col w-full bg-white rounded-lg p-6 shadow-md transition-opacity duration-300 opacity-100">
+            <h2 className="text-2xl lg:text-4xl font-bold mb-4  text-center">
+              Executive Committee
+            </h2>
+            <ExecomPanel />
           </div>
         ) : (
-          <div className="bg-white rounded-lg p-6 shadow-md transition-opacity duration-300 opacity-100">
-            <h2 className="text-2xl font-bold mb-4">Board of Directors</h2>
-            <p className="text-gray-700">
-              Details about the Board of Directors go here...
-            </p>
+          <div className="flex flex-col w-full bg-white rounded-lg p-6 shadow-md transition-opacity duration-300 opacity-100">
+            <h2 className="text-2xl lg:text-4xl font-bold mb-4  text-center">
+              Board of Directors
+            </h2>
+            <BodPanel />
           </div>
         )}
       </div>

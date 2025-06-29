@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar";
 import StorePage from "./pages/StorePage";
 import CentennialPage from "./pages/CentennialPage";
 import LeadershipPage from "./pages/LeadershipPage";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const AppContent = () => {
         <Route path={"/raffle"} element={<RafflePage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
+      <Footer />
     </div>
   );
 };

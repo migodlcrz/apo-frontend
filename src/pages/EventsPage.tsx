@@ -120,6 +120,77 @@ const EventsPage: React.FC = () => {
     },
   ];
 
+  const morePhotos = [
+    {
+      title: "Easter 2024",
+      date: "Apr 1-2, 2024",
+      images: [
+        "/more-photos/easter/photo-1.jpeg",
+        "/more-photos/easter/photo-2.jpeg",
+        "/more-photos/easter/photo-4.jpeg",
+        "/more-photos/easter/photo-5.jpeg",
+        "/more-photos/easter/photo-6.jpeg",
+        "/more-photos/easter/photo-8.jpeg",
+        "/more-photos/easter/photo-7.jpeg",
+        "/more-photos/easter/photo-3.jpeg",
+      ],
+    },
+    {
+      title: "Adopt a Hwy",
+      date: "May 4-5, 2024",
+      images: [
+        "more-photos/adopt-a-hwy/photo-1.jpeg",
+        "/more-photos/adopt-a-hwy/photo-2.jpeg",
+        "/more-photos/adopt-a-hwy/photo-3.jpeg",
+        "/more-photos/adopt-a-hwy/photo-4.jpeg",
+        "/more-photos/adopt-a-hwy/photo-5.jpeg",
+        "/more-photos/adopt-a-hwy/photo-6.jpeg",
+        "/more-photos/adopt-a-hwy/photo-7.jpeg",
+        "/more-photos/adopt-a-hwy/photo-8.jpeg",
+        "/more-photos/adopt-a-hwy/photo-9.jpeg",
+        "/more-photos/adopt-a-hwy/photo-10.jpeg",
+        "/more-photos/adopt-a-hwy/photo-11.jpeg",
+        "/more-photos/adopt-a-hwy/photo-12.jpeg",
+      ],
+    },
+    {
+      title: "Anniv/Xmas Party",
+      date: "Dec 15-17, 2024",
+      images: [
+        "/more-photos/anniv-xmas-party/photo-1.jpeg",
+        "/more-photos/anniv-xmas-party/photo-2.jpeg",
+        "/more-photos/anniv-xmas-party/photo-3.jpeg",
+        "/more-photos/anniv-xmas-party/photo-4.jpeg",
+        "/more-photos/anniv-xmas-party/photo-5.jpeg",
+        "/more-photos/anniv-xmas-party/photo-6.jpeg",
+        "/more-photos/anniv-xmas-party/photo-7.jpeg",
+        "/more-photos/anniv-xmas-party/photo-8.jpeg",
+        "/more-photos/anniv-xmas-party/photo-9.jpeg",
+        "/more-photos/anniv-xmas-party/photo-10.jpeg",
+        "/more-photos/anniv-xmas-party/photo-11.jpeg",
+        "/more-photos/anniv-xmas-party/photo-12.jpeg",
+      ],
+    },
+    {
+      title: "2025 1st GMM",
+      date: "Jan 19-20, 2025",
+      images: [
+        "/more-photos/first-gmm/photo-1.jpeg",
+        "/more-photos/first-gmm/photo-2.jpeg",
+        "/more-photos/first-gmm/photo-3.jpeg",
+        "/more-photos/first-gmm/photo-4.jpeg",
+        "/more-photos/first-gmm/photo-5.jpeg",
+        "/more-photos/first-gmm/photo-6.jpeg",
+        "/more-photos/first-gmm/photo-7.jpeg",
+        "/more-photos/first-gmm/photo-8.png",
+        "/more-photos/first-gmm/photo-9.jpeg",
+        "/more-photos/first-gmm/photo-10.jpeg",
+        "/more-photos/first-gmm/photo-11.jpeg",
+        "/more-photos/first-gmm/photo-12.jpeg",
+      ],
+    },
+  ];
+
   return (
     <div className="flex flex-col">
       <div className="flex flex-col lg:flex-row p-8 gap-8 lg:gap-0">
@@ -139,14 +210,14 @@ const EventsPage: React.FC = () => {
           <div>
             <span className="text-4xl font-semibold">Upcoming Events:</span>
             <ul className="mt-4 list-disc list-inside text-lg text-gray-700">
-              <li>March 2025 - Virtual Spin the Wheel</li>
-              <li>April 2025 - Virtual Fun Run</li>
-              <li>May 2025 - Bingo Online/Bowling</li>
+              <li>July 04 2025 - July 06 2025 - GNY Camping - Wildwood</li>
+              <li>August 23 2025 - Adopt A Hwy & GMM - NJ</li>
+              {/* <li>May 2025 - Bingo Online/Bowling</li>
               <li>June 2025 - Filipino Parade (Sell)</li>
               <li>July 2025 - Fun Run</li>
               <li>August 2025 - Virtual Spin the Wheel</li>
               <li>September 2025 - Bingo Online</li>
-              <li>October 2025 - Virtual Spin the Wheel</li>
+              <li>October 2025 - Virtual Spin the Wheel</li> */}
             </ul>
           </div>
         </div>
@@ -170,6 +241,27 @@ const EventsPage: React.FC = () => {
         <div className="flex flex-col items-center w-full p-6 gap-10">
           <h1 className="text-white text-2xl font-bold">Past events</h1>
           <EventsCarousel events={pastEvents} />
+          {/* More Photos Section */}
+          <div className="w-full max-w-screen-xl px-4 pb-12 flex flex-col gap-12 text-center">
+            {morePhotos.map((section, index) => (
+              <div className="flex w-full flex-col gap-6" key={index}>
+                <h2 className="text-2xl lg:text-4xl font-bold text-white mb-4">
+                  {section.title} ({section.date})
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                  {section.images.map((src, imgIndex) => (
+                    <img
+                      key={imgIndex}
+                      src={src}
+                      alt={`${section.title} ${imgIndex + 1}`}
+                      className="rounded-xl shadow-md"
+                      loading="lazy"
+                    />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
