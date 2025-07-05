@@ -8,7 +8,9 @@ const Footer = () => {
         <div className="flex flex-col gap-2">
           <div className="flex items-center gap-2">
             <img src="/100-year.png" alt="APO Logo" className="h-8 w-auto" />
-            <h1 className="text-xl font-bold">Alpha Phi Omega</h1>
+            <h1 className="text-sm lg:text-xl font-bold">
+              Alpha Phi Omega AA Greater New York
+            </h1>
           </div>
           <p className="text-sm text-gray-300">
             A national coeducational service organization founded on the
@@ -87,7 +89,7 @@ const Footer = () => {
       </div>
 
       <div className="text-center text-xs text-gray-400 mt-6">
-        &copy; {new Date().getFullYear()} Alpha Phi Omega. All rights reserved.
+        &copy; {new Date().getFullYear()} APOAA GNY. All rights reserved.
       </div>
     </footer>
   );

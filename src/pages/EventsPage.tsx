@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Calendar from "../components/Calendar";
 import EventsCarousel from "../components/EventsCarousel";
+import Album from "../components/Album";
+import YellowTag from "../components/YellowTag";
 
 const EventsPage: React.FC = () => {
   const today = new Date();
@@ -130,9 +132,9 @@ const EventsPage: React.FC = () => {
         "/more-photos/easter/photo-4.jpeg",
         "/more-photos/easter/photo-5.jpeg",
         "/more-photos/easter/photo-6.jpeg",
-        "/more-photos/easter/photo-8.jpeg",
-        "/more-photos/easter/photo-7.jpeg",
-        "/more-photos/easter/photo-3.jpeg",
+        // "/more-photos/easter/photo-8.jpeg",
+        // "/more-photos/easter/photo-7.jpeg",
+        // "/more-photos/easter/photo-3.jpeg",
       ],
     },
     {
@@ -151,14 +153,17 @@ const EventsPage: React.FC = () => {
         "/more-photos/adopt-a-hwy/photo-10.jpeg",
         "/more-photos/adopt-a-hwy/photo-11.jpeg",
         "/more-photos/adopt-a-hwy/photo-12.jpeg",
+        "/more-photos/adopt-a-hwy/photo-13.jpeg",
+        "/more-photos/adopt-a-hwy/photo-14.jpeg",
       ],
     },
     {
-      title: "Anniv/Xmas Party",
+      title: "99th Anniv/Xmas Party",
       date: "Dec 15-17, 2024",
       images: [
-        "/more-photos/anniv-xmas-party/photo-1.jpeg",
+        "/more-photos/anniv-xmas-party/photo-12.jpeg",
         "/more-photos/anniv-xmas-party/photo-2.jpeg",
+        "/more-photos/anniv-xmas-party/photo-1.jpeg",
         "/more-photos/anniv-xmas-party/photo-3.jpeg",
         "/more-photos/anniv-xmas-party/photo-4.jpeg",
         "/more-photos/anniv-xmas-party/photo-5.jpeg",
@@ -168,7 +173,6 @@ const EventsPage: React.FC = () => {
         "/more-photos/anniv-xmas-party/photo-9.jpeg",
         "/more-photos/anniv-xmas-party/photo-10.jpeg",
         "/more-photos/anniv-xmas-party/photo-11.jpeg",
-        "/more-photos/anniv-xmas-party/photo-12.jpeg",
       ],
     },
     {
@@ -187,6 +191,39 @@ const EventsPage: React.FC = () => {
         "/more-photos/first-gmm/photo-10.jpeg",
         "/more-photos/first-gmm/photo-11.jpeg",
         "/more-photos/first-gmm/photo-12.jpeg",
+        // "/more-photos/first-gmm/photo-13.jpeg",
+        "/more-photos/first-gmm/photo-14.jpeg",
+        "/more-photos/first-gmm/photo-15.jpeg",
+      ],
+    },
+    {
+      title: "75th Anniversary",
+      date: "",
+      images: [
+        "/more-photos/75-anniv/photo-1.jpeg",
+        "/more-photos/75-anniv/photo-2.jpeg",
+        "/more-photos/75-anniv/photo-3.jpeg",
+        "/more-photos/75-anniv/photo-4.jpeg",
+        "/more-photos/75-anniv/photo-5.jpeg",
+        "/more-photos/75-anniv/photo-6.jpeg",
+        "/more-photos/75-anniv/photo-7.jpeg",
+        "/more-photos/75-anniv/photo-8.jpeg",
+      ],
+    },
+    {
+      title: "ACNA Spring Meeting 2025",
+      date: "",
+      images: [
+        "/more-photos/spring-meeting/photo-1.jpeg",
+        "/more-photos/spring-meeting/photo-2.jpeg",
+        "/more-photos/spring-meeting/photo-3.jpeg",
+        "/more-photos/spring-meeting/photo-4.jpeg",
+        "/more-photos/spring-meeting/photo-5.jpeg",
+        "/more-photos/spring-meeting/photo-6.jpeg",
+        "/more-photos/spring-meeting/photo-7.jpeg",
+        "/more-photos/spring-meeting/photo-8.jpeg",
+        "/more-photos/spring-meeting/photo-9.jpeg",
+        "/more-photos/spring-meeting/photo-10.jpeg",
       ],
     },
   ];
@@ -242,24 +279,31 @@ const EventsPage: React.FC = () => {
           <h1 className="text-white text-2xl font-bold">Past events</h1>
           <EventsCarousel events={pastEvents} />
           {/* More Photos Section */}
-          <div className="w-full max-w-screen-xl px-4 pb-12 flex flex-col gap-12 text-center">
+          <YellowTag text="More Albums" />
+          <div className="grid grid-cols-1 lg:grid-cols-3 w-full max-w-screen-xl px-4 pb-12 gap-12 text-center">
             {morePhotos.map((section, index) => (
-              <div className="flex w-full flex-col gap-6" key={index}>
-                <h2 className="text-2xl lg:text-4xl font-bold text-white mb-4">
-                  {section.title} ({section.date})
-                </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                  {section.images.map((src, imgIndex) => (
-                    <img
-                      key={imgIndex}
-                      src={src}
-                      alt={`${section.title} ${imgIndex + 1}`}
-                      className="rounded-xl shadow-md"
-                      loading="lazy"
-                    />
-                  ))}
-                </div>
-              </div>
+              <Album
+                key={index}
+                title={section.title}
+                date={section.date}
+                images={section.images}
+              />
+              // <div className="flex w-full flex-col gap-6" key={index}>
+              //   <h2 className="text-2xl lg:text-4xl font-bold text-white mb-4">
+              //     {section.title} ({section.date})
+              //   </h2>
+              //   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+              //     {section.images.map((src, imgIndex) => (
+              //       <img
+              //         key={imgIndex}
+              //         src={src}
+              //         alt={`${section.title} ${imgIndex + 1}`}
+              //         className="rounded-xl shadow-md"
+              //         loading="lazy"
+              //       />
+              //     ))}
+              //   </div>
+              // </div>
             ))}
           </div>
         </div>
