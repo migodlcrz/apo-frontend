@@ -16,9 +16,11 @@ const Navbar = () => {
       <div className="fixed top-0 left-0 w-full bg-[#282e3a] z-50 shadow-md">
         <div className="flex flex-row h-16 px-4 items-center justify-between">
           {/* Logo */}
-          <div className="flex flex-row gap-2">
-            <img src="/100-year.png" className="w-auto h-8" />
-            <h1 className="text-white font-bold text-xl">Alpha Phi Omega</h1>
+          <div className="flex flex-row gap-2 items-center">
+            <img src="/100-year.png" className="w-auto h-5 lg:h-8" />
+            <h1 className="text-white font-bold text-sm lg:text-xl">
+              Alpha Phi Omega AA Greater New York
+            </h1>
           </div>
 
           {/* Desktop Menu (Hidden on Small Screens) */}

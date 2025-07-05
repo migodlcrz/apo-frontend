@@ -4,7 +4,15 @@ import { IoTrophy } from "react-icons/io5";
 import Card from "../components/Card";
 import { FaHandshakeAngle, FaHeart } from "react-icons/fa6";
 import { RiPlantFill } from "react-icons/ri";
+import { CiLocationOn } from "react-icons/ci";
+import { FaLocationDot } from "react-icons/fa6";
 import { useRef } from "react";
+import RedirectCard from "../components/RedirectCard";
+import { TbNumber100Small } from "react-icons/tb";
+import { FaCalendarAlt, FaShoppingCart } from "react-icons/fa";
+import { IoIosPeople } from "react-icons/io";
+import { BiSolidDonateHeart } from "react-icons/bi";
+import YellowTag from "../components/YellowTag";
 
 const LandingPage = () => {
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -21,7 +29,47 @@ const LandingPage = () => {
 
   return (
     <div id="Landing Page" className="flex flex-col gap-10 pb-10 w-full">
-      <div className="flex flex-col lg:px-40">
+      <div className="w-full relative">
+        <img
+          src="/newyork-skyline.jpg"
+          className="w-full h-[calc(100vh-64px)] object-cover"
+          alt="Main Landing"
+        />
+        <div className="absolute inset-0 bg-opacity-50 flex flex-col items-center justify-center text-center px-8 lg:px-64 gap-8">
+          <div className="flex flex-row gap-1 lg:gap-2 items-center bg-yellow-500 px-4 py-2 rounded-full text-black font-semibold text-sm lg:text-lg shadow-lg">
+            <span className="text-lg">
+              <FaLocationDot />
+            </span>
+            <span className="text-xs lg:text-lg">
+              NYC • BROOKLYN • QUEENS • MANHATTAN • THE BRONX
+            </span>
+          </div>
+          <span className="text-white text-3xl lg:text-7xl font-extrabold drop-shadow-lg px-0 lg:px-20">
+            Come celebrate <span className="text-yellow-600">100 years</span> of
+            Alpha Phi Omega!
+          </span>
+          <span className="text-white text-sm lg:text-3xl font-medium drop-shadow-lg px-0 lg:px-20">
+            Join us for an unforgettable Centennial Celebration on December
+            14-16 2025, hosted by APOAA Greater New York. Let's honor a century
+            of Leadership, Friendship, and Service together!
+          </span>
+          <div className="flex flex-row gap-2 items-center justify-center">
+            <button
+              className="bg-yellow-500 text-black font-bold text-md lg:text-xl py-2 lg:py-3 px-6 lg:px-8 rounded-lg transition hover:bg-yellow-700"
+              onClick={handleScrolltoCentennial}
+            >
+              See details
+            </button>
+            <button
+              className="bg-slate-100 text-[#282e3a] font-bold text-md lg:text-xl py-2 lg:py-3 px-6 lg:px-8 rounded-lg transition hover:bg-slate-300"
+              onClick={handleScrollToAbout}
+            >
+              About Us
+            </button>
+          </div>
+        </div>
+      </div>
+      {/* <div className="flex flex-col lg:px-40">
         <div className="flex flex-col items-start justify-center p-10 pt-20 lg:px-12 space-y-10">
           <div className="flex flex-col w-full text-start gap-10">
             <Tag mode="light">APO AAGNY</Tag>
@@ -55,11 +103,6 @@ const LandingPage = () => {
           </div>
 
           <div className="flex w-full justify-center">
-            {/* <img
-              src="/boat-ride.jpg"
-              className="w-1/2 h-[80vh] object-cover"
-              alt="Main Landing"
-            /> */}
             <video
               src="/teaser-1.mp4"
               className="w-full lg:w-2/3 rounded-lg shadow-lg"
@@ -69,12 +112,70 @@ const LandingPage = () => {
             </video>
           </div>
         </div>
+      </div> */}
+      <div className="flex flex-col gap-4 items-center">
+        <Tag mode="dark">Explore More</Tag>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 px-10 lg:px-40">
+          <span>
+            <RedirectCard
+              icon={<TbNumber100Small />}
+              title="Centennial"
+              description="Celebrate 100 years of Alpha Phi Omega with special events and historical highlights."
+              iconColor="text-yellow-500"
+              onClick={() => navigate("/centennial")}
+            />
+          </span>
+          <span>
+            <RedirectCard
+              icon={<FaCalendarAlt />}
+              title="Events"
+              description="Stay updated with upcoming Centennial programs, socials, and official activities."
+              iconColor="text-blue-500"
+              onClick={() => navigate("/events")}
+            />
+          </span>
+          <span>
+            <RedirectCard
+              icon={<FaHeart />}
+              title="Service"
+              description="Join impactful service initiatives that honor our commitment to community and humanity."
+              iconColor="text-red-500"
+            />
+          </span>
+          <span>
+            <RedirectCard
+              icon={<IoIosPeople />}
+              title="Leadership"
+              description="Discover how our brothers and sisters lead with purpose through the decades."
+              iconColor="text-green-500"
+              onClick={() => navigate("/leadership")}
+            />
+          </span>
+          <span>
+            <RedirectCard
+              icon={<FaShoppingCart />}
+              title="Shop"
+              description="Grab exclusive Centennial merch and memorabilia to mark this historic milestone."
+              iconColor="text-purple-500"
+              onClick={() => navigate("/store")}
+            />
+          </span>
+          <span>
+            <RedirectCard
+              icon={<BiSolidDonateHeart />}
+              title="Donate"
+              description="Support the future of APO by contributing to our ongoing programs and causes."
+              iconColor="text-orange-500"
+              onClick={() => navigate("/donate")}
+            />
+          </span>
+        </div>
       </div>
 
       {/* Slideshow & Logo Section */}
       <div
         ref={centennialRef}
-        className="flex flex-col gap-2 lg:gap-10 w-full items-center justify-center py-10 bg-slate-100 lg:px-40"
+        className="flex flex-col gap-2 lg:gap-10 w-full items-center justify-center py-10 bg-slate-100  px-10 lg:px-40"
       >
         {/* Slideshow */}
         <div className="flex flex-col justify-center items-center gap-2">
@@ -97,7 +198,7 @@ const LandingPage = () => {
                   "_blank"
                 )
               }
-              className="bg-[#282e3a] text-white px-4 py-2 rounded-lg font-semibold text-md lg:text-xl transition hover:bg-[#1e2025] cursor-pointer"
+              className="bg-yellow-500 text-white px-4 py-2 rounded-lg font-semibold text-md lg:text-xl transition hover:bg-[#1e2025] cursor-pointer"
             >
               Register Now
             </button>
@@ -116,13 +217,33 @@ const LandingPage = () => {
             <img src="/centennial-register.PNG" alt="" />
           </div>
         </div>
-
-        {/* Logo & Text */}
-        <div className="w-fit lg:w-1/2 flex flex-col items-center justify-center text-center p-6 bg-[#282e3a]">
-          <img src="/100-year.png" className="w-auto h-[80%] mb-4" />
-          <span className="text-white font-bold text-2xl lg:text-4xl">
-            APOAA-GNY
-          </span>
+        <div className="flex flex-col lg:flex-row w-full bg-[#282e3a] gap-10 p-10 rounded-xl">
+          <div className="flex flex-col w-full lg:w-1/2 justify-between">
+            <div className="flex flex-col gap-4">
+              <span className="text-white text-lg lg:text-4xl font-bold">
+                A Century of Service in the Greatest City
+              </span>
+              <span className="text-yellow-200 text-sm lg:text-xl">
+                Since 1925, Alpha Phi Omega has been woven into the fabric of
+                New York City – from Harlem to Wall Street, from the Village to
+                the Heights.
+              </span>
+            </div>
+            <div className="hidden lg:flex lg:flex-row lg:w-full lg:gap-4">
+              <YellowTag icon={<FaLocationDot />} text="Leadership" />
+              <YellowTag icon={<FaLocationDot />} text="Friendship" />
+              <YellowTag icon={<FaLocationDot />} text="Service" />
+            </div>
+          </div>
+          <div className="flex flex-col w-full lg:w-1/2">
+            <video
+              src="/teaser-1.mp4"
+              className="w-full lg:w-full rounded-lg shadow-lg"
+              controls
+            >
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
       </div>
 
@@ -173,7 +294,7 @@ const LandingPage = () => {
       </div> */}
 
       {/* Vision Section */}
-      <div className="flex flex-col w-full justify-center bg-white items-center p-8 lg:py-16 gap-4 lg:px-40">
+      {/* <div className="flex flex-col w-full justify-center bg-white items-center p-8 lg:py-16 gap-4 lg:px-40">
         <Tag mode="light">Our Vision</Tag>
         <span className="text-xl lg:text-6xl font-bold">A Better Tomorrow</span>
         <div className="flex flex-col w-full items-center justify-center px-6">
@@ -211,7 +332,7 @@ const LandingPage = () => {
             description="Fulfill our mission by encouraging members to share knowledge, grow personally, improve communities, and invest in meaningful causes."
           />
         </div>
-      </div>
+      </div> */}
 
       {/* Service & Fellowship Sections */}
       <div className="flex flex-col lg:flex-row gap-4 bg-slate-100 py-10">
