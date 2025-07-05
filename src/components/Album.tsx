@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 interface AlbumProps {
   title: string;
@@ -8,9 +8,27 @@ interface AlbumProps {
 
 const Album: React.FC<AlbumProps> = ({ title, date, images }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const modalRef = useRef<HTMLDivElement>(null);
 
   const toggleGallery = () => setIsOpen(!isOpen);
+
   const coverImage = images[0];
+
+  // Close modal on click outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        isOpen &&
+        modalRef.current &&
+        !modalRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isOpen]);
 
   return (
     <div className="flex w-full flex-col">
@@ -29,6 +47,7 @@ const Album: React.FC<AlbumProps> = ({ title, date, images }) => {
           </span>
         </div>
       </div>
+
       <h2 className="flex flex-col rounded-b-xl text-black text-start bg-yellow-500 p-4">
         <span className="text-sm lg:text-2xl font-bold">{title}</span>
         <span className="text-xs lg:text-md text-gray-800">{date}</span>
@@ -37,7 +56,10 @@ const Album: React.FC<AlbumProps> = ({ title, date, images }) => {
       {/* Modal */}
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm">
-          <div className="relative max-w-6xl w-full p-6 bg-white rounded-xl overflow-y-auto max-h-[90vh]">
+          <div
+            ref={modalRef}
+            className="relative max-w-6xl w-full p-6 bg-white overflow-y-auto max-h-[90vh]"
+          >
             <button
               onClick={toggleGallery}
               className="absolute top-4 right-4 text-black hover:text-red-500 text-2xl font-bold"
