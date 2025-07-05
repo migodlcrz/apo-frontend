@@ -1,10 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import Tag from "../components/Tag";
-import { IoTrophy } from "react-icons/io5";
-import Card from "../components/Card";
-import { FaHandshakeAngle, FaHeart } from "react-icons/fa6";
-import { RiPlantFill } from "react-icons/ri";
-import { CiLocationOn } from "react-icons/ci";
+// import { IoTrophy } from "react-icons/io5";
+// import Card from "../components/Card";
+import {
+  // FaHandshakeAngle,
+  FaHeart,
+} from "react-icons/fa6";
+// import { RiPlantFill } from "react-icons/ri";
+// import { CiLocationOn } from "react-icons/ci";
 import { FaLocationDot } from "react-icons/fa6";
 import { useRef } from "react";
 import RedirectCard from "../components/RedirectCard";
