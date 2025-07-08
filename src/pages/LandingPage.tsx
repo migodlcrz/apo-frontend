@@ -38,12 +38,12 @@ const LandingPage = () => {
           className="w-full h-[calc(100vh-64px)] object-cover"
           alt="Main Landing"
         />
-        <div className="absolute inset-0 bg-opacity-50 flex flex-col items-center justify-center text-center px-8 lg:px-64 gap-8 bottom-72">
-          <div className="flex flex-row gap-1 lg:gap-2 items-center bg-yellow-500 px-4 py-2 rounded-full text-black font-semibold text-sm lg:text-lg shadow-lg">
+        <div className="absolute inset-0 bg-opacity-50 flex flex-col items-center justify-center text-center px-8 lg:px-64 gap-8 bottom-64">
+          {/* <div className="flex flex-row gap-1 lg:gap-2 items-center bg-yellow-500 px-4 py-2 rounded-full text-black font-semibold text-sm lg:text-lg shadow-lg">
             <span className="text-xs lg:text-lg">
               ALPHA PHI OMEGA AA GREATER NEW YORK
             </span>
-          </div>
+          </div> */}
           <span className="text-white text-3xl lg:text-7xl font-extrabold drop-shadow-lg px-0 lg:px-20">
             Come celebrate <span className="text-yellow-600">100 years</span> of
             Alpha Phi Omega!
