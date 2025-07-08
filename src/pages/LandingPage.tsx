@@ -34,24 +34,21 @@ const LandingPage = () => {
     <div id="Landing Page" className="flex flex-col gap-10 pb-10 w-full">
       <div className="w-full relative">
         <img
-          src="/newyork-skyline.jpg"
+          src="/newyork-skyline-1.jpg"
           className="w-full h-[calc(100vh-64px)] object-cover"
           alt="Main Landing"
         />
-        <div className="absolute inset-0 bg-opacity-50 flex flex-col items-center justify-center text-center px-8 lg:px-64 gap-8">
+        <div className="absolute inset-0 bg-opacity-50 flex flex-col items-center justify-center text-center px-8 lg:px-64 gap-8 bottom-72">
           <div className="flex flex-row gap-1 lg:gap-2 items-center bg-yellow-500 px-4 py-2 rounded-full text-black font-semibold text-sm lg:text-lg shadow-lg">
-            <span className="text-lg">
-              <FaLocationDot />
-            </span>
             <span className="text-xs lg:text-lg">
-              NYC • BROOKLYN • QUEENS • MANHATTAN • THE BRONX
+              ALPHA PHI OMEGA AA GREATER NEW YORK
             </span>
           </div>
           <span className="text-white text-3xl lg:text-7xl font-extrabold drop-shadow-lg px-0 lg:px-20">
             Come celebrate <span className="text-yellow-600">100 years</span> of
             Alpha Phi Omega!
           </span>
-          <span className="text-white text-sm lg:text-3xl font-medium drop-shadow-lg px-0 lg:px-20">
+          <span className="text-yellow-500 text-sm lg:text-3xl font-medium drop-shadow-lg px-0 lg:px-20">
             Join us for an unforgettable Centennial Celebration on December
             14-16 2025, hosted by APOAA Greater New York. Let's honor a century
             of Leadership, Friendship, and Service together!
