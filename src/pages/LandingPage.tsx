@@ -335,7 +335,7 @@ const LandingPage = () => {
       </div> */}
 
       {/* Service & Fellowship Sections */}
-      <div className="flex flex-col lg:flex-row gap-4 bg-slate-100 py-10">
+      {/* <div className="flex flex-col lg:flex-row gap-4 bg-slate-100 py-10">
         <div className="flex flex-col w-full justify-start items-start px-8 gap-4">
           <Tag mode="light">Service</Tag>
           <span className="text-xl lg:text-4xl font-bold">
@@ -385,7 +385,7 @@ const LandingPage = () => {
             </span>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
