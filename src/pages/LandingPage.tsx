@@ -46,7 +46,7 @@ const LandingPage = () => {
       {/* HERO SECTION */}
       <div className="w-full relative overflow-hidden">
         <img
-          src="/newyork-skyline-1.jpg"
+          src="/newyork-gif.gif"
           className="w-full h-[calc(100vh-64px)] object-cover brightness-[0.6]"
           alt="Main Landing"
         />
