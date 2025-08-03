@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
 
 import Tag from "../components/Tag";
 import RedirectCard from "../components/RedirectCard";
@@ -43,14 +44,27 @@ const LandingPage = () => {
   return (
     <div id="Landing Page" className="flex flex-col gap-10 pb-10 w-full">
       {/* HERO SECTION */}
-      <div className="w-full relative">
+      <div className="w-full relative overflow-hidden">
         <img
           src="/newyork-skyline-1.jpg"
           className="w-full h-[calc(100vh-64px)] object-cover brightness-[0.6]"
           alt="Main Landing"
         />
+
+        {/* Floating Blob Gradient */}
+        <div className="absolute top-[-100px] left-[-100px] w-[300px] h-[300px] bg-yellow-300 rounded-full filter blur-3xl opacity-30 animate-[bounceSlow_6s_ease-in-out_infinite] z-0"></div>
+
+        {/* Floating APO Seal */}
+        <motion.img
+          src="/apo-seal.png"
+          alt="APO Seal"
+          className="absolute bottom-10 right-10 w-32 opacity-10 z-0"
+          animate={{ y: [0, -10, 0] }}
+          transition={{ repeat: Infinity, duration: 6 }}
+        />
+
         <motion.div
-          className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 lg:px-64 gap-6"
+          className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 lg:px-64 gap-6 z-10"
           initial="hidden"
           animate="visible"
           variants={fadeUp}
@@ -67,8 +81,18 @@ const LandingPage = () => {
             custom={1}
             className="text-white text-4xl lg:text-7xl font-extrabold drop-shadow-2xl"
           >
-            Celebrate <span className="text-yellow-400">100 Years</span> of
-            Alpha Phi Omega
+            Celebrate <span className="text-yellow-400">100 Years</span> of{" "}
+            <span className="text-white">
+              <Typewriter
+                words={["Leadership", "Fellowship", "Service"]}
+                loop={true}
+                cursor
+                cursorStyle="|"
+                typeSpeed={80}
+                deleteSpeed={50}
+                delaySpeed={1500}
+              />
+            </span>
           </motion.h1>
           <motion.p
             variants={fadeUp}
@@ -85,10 +109,11 @@ const LandingPage = () => {
             className="flex flex-row gap-4 items-center justify-center"
           >
             <button
-              className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold text-md lg:text-xl py-2 lg:py-3 px-6 lg:px-8 rounded-lg shadow-lg transition"
+              className="relative group overflow-hidden bg-yellow-500 hover:bg-yellow-600 text-black font-bold text-md lg:text-xl py-2 lg:py-3 px-6 lg:px-8 rounded-lg shadow-lg transition"
               onClick={handleScrolltoCentennial}
             >
-              See details
+              <span className="absolute inset-0 bg-white opacity-10 rounded-full scale-0 group-hover:scale-150 transition-transform duration-700 ease-out" />
+              <span className="relative z-10">See details</span>
             </button>
             <button
               className="bg-white hover:bg-gray-200 text-[#282e3a] font-bold text-md lg:text-xl py-2 lg:py-3 px-6 lg:px-8 rounded-lg shadow-md transition"
