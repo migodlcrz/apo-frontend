@@ -7,6 +7,7 @@ import { Typewriter } from "react-simple-typewriter";
 import Tag from "../components/Tag";
 import RedirectCard from "../components/RedirectCard";
 import YellowTag from "../components/YellowTag";
+import NYCSlideshow from "../components/NYCSlideshow";
 
 import { FaHeart, FaLocationDot } from "react-icons/fa6";
 import { FaCalendarAlt } from "react-icons/fa";
@@ -37,19 +38,11 @@ const LandingPage = () => {
     aboutRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const handleScrolltoCentennial = () => {
-    centennialRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <div id="Landing Page" className="flex flex-col gap-10 pb-10 w-full">
       {/* HERO SECTION */}
       <div className="w-full relative overflow-hidden">
-        <img
-          src="/newyork-gif.gif"
-          className="w-full h-[calc(100vh-64px)] object-cover brightness-[0.6]"
-          alt="Main Landing"
-        />
+        <NYCSlideshow />
 
         {/* Floating Blob Gradient */}
         <div className="absolute top-[-100px] left-[-100px] w-[300px] h-[300px] bg-yellow-300 rounded-full filter blur-3xl opacity-30 animate-[bounceSlow_6s_ease-in-out_infinite] z-0"></div>
@@ -72,19 +65,26 @@ const LandingPage = () => {
           <motion.div
             variants={fadeUp}
             custom={0}
-            className="bg-yellow-400/90 px-6 py-2 rounded-full text-black font-bold text-sm lg:text-lg shadow-lg"
+            className="bg-yellow-400/90 px-6 py-2 rounded-full text-zinc-900 font-bold text-sm lg:text-lg shadow-lg"
           >
-            ALPHA PHI OMEGA AA GREATER NEW YORK
+            <span
+              style={{ fontFamily: "Broadway, sans-serif", fontWeight: "bold" }}
+            >
+              APO ALUMNI ASSOCIATION OF GREATER NEW YORK
+            </span>
           </motion.div>
           <motion.h1
             variants={fadeUp}
             custom={1}
-            className="text-white text-4xl lg:text-7xl font-extrabold drop-shadow-2xl"
+            className="flex flex-col text-white text-4xl lg:text-6xl font-extrabold drop-shadow-2xl"
           >
-            Celebrate <span className="text-yellow-400">100 Years</span> of{" "}
+            <span>
+              <span className="text-yellow-400">100 Years</span> of Resolute
+              Commitment to{" "}
+            </span>
             <span className="text-white">
               <Typewriter
-                words={["Leadership", "Fellowship", "Service"]}
+                words={["Leadership", "Friendship", "Service"]}
                 loop={true}
                 cursor
                 cursorStyle="|"
@@ -110,7 +110,7 @@ const LandingPage = () => {
           >
             <button
               className="relative group overflow-hidden bg-yellow-500 hover:bg-yellow-600 text-black font-bold text-md lg:text-xl py-2 lg:py-3 px-6 lg:px-8 rounded-lg shadow-lg transition"
-              onClick={handleScrolltoCentennial}
+              onClick={() => navigate("/centennial")}
             >
               <span className="absolute inset-0 bg-white opacity-10 rounded-full scale-0 group-hover:scale-150 transition-transform duration-700 ease-out" />
               <span className="relative z-10">See details</span>
@@ -188,15 +188,19 @@ const LandingPage = () => {
         viewport={{ once: true }}
         variants={fadeUp}
       >
-        <div className="text-center flex flex-col gap-4 max-w-3xl">
+        <div className="text-center items-center flex flex-col gap-4 max-w-3xl">
           <Tag mode="dark">Special Announcement</Tag>
           <h2 className="text-2xl lg:text-5xl font-bold">
             Celebrating our 100th Anniversary
           </h2>
           <p className="text-slate-600 text-md lg:text-xl">
-            Join us in commemorating a century of service, impact, and community
-            building. A hundred years of making a difference, and we're just
-            getting started.
+            Join us for a momentous Centennial Celebration on December 14–16,
+            2025. Hosted by APO - ALUMNI ASSOCIATION of GREATER NEW YORK.
+          </p>
+          <p className="text-slate-600 text-md lg:text-xl">
+            You Are Invited To A Once in a Lifetime Event that You Don’t Want To
+            Miss. A Century of Great Leadership, Lasting Friendship, and
+            Relentless Service!
           </p>
           <div className="flex flex-row gap-4 justify-center mt-4">
             <button
