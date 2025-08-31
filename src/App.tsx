@@ -10,6 +10,7 @@ import StorePage from "./pages/StorePage";
 import CentennialPage from "./pages/CentennialPage";
 import LeadershipPage from "./pages/LeadershipPage";
 import Footer from "./components/Footer";
+import AboutPage from "./pages/AboutPage";
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const AppContent = () => {
         <Route path={"/events"} element={<EventsPage />} />
         <Route path={"/store"} element={<StorePage />} />
         <Route path={"/raffle"} element={<RafflePage />} />
+        <Route path={"/about"} element={<AboutPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />
