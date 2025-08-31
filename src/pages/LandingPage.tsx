@@ -6,10 +6,9 @@ import { Typewriter } from "react-simple-typewriter";
 
 import Tag from "../components/Tag";
 import RedirectCard from "../components/RedirectCard";
-import YellowTag from "../components/YellowTag";
 import NYCSlideshow from "../components/NYCSlideshow";
 
-import { FaHeart, FaLocationDot } from "react-icons/fa6";
+import { FaHeart } from "react-icons/fa6";
 import { FaCalendarAlt } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { TbNumber100Small } from "react-icons/tb";
@@ -31,7 +30,6 @@ const fadeUp: Variants = {
 
 const LandingPage = () => {
   const aboutRef = useRef<HTMLDivElement>(null);
-  const centennialRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
 
   const handleScrollToAbout = () => {

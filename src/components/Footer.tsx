@@ -2,7 +2,7 @@ import { FaFacebook, FaInstagram } from "react-icons/fa"; // Make sure to instal
 
 const Footer = () => {
   return (
-    <footer className="bg-[#282e3a] text-white py-8 mt-16 shadow-inner">
+    <footer className="bg-[#282e3a] text-white py-8 shadow-inner">
       <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-start gap-8">
         {/* Logo and Org Info */}
         <div className="flex flex-col gap-2">
