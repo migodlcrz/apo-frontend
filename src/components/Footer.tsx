@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="flex items-center gap-2">
             <img src="/100-year.png" alt="APO Logo" className="h-8 w-auto" />
             <h1 className="text-sm lg:text-xl font-bold">
-              Alpha Phi Omega AA Greater New York
+              APO ALUMNI ASSOCIATION OF GREATER NEW YORK
             </h1>
           </div>
           <p className="text-sm text-gray-300">

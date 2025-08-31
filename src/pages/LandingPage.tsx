@@ -70,7 +70,7 @@ const LandingPage = () => {
             <span
               style={{ fontFamily: "Broadway, sans-serif", fontWeight: "bold" }}
             >
-              APO ALUMNI ASSOCIATION OF GREATER NEW YORK
+              APOAAGNY
             </span>
           </motion.div>
           <motion.h1
@@ -179,91 +179,14 @@ const LandingPage = () => {
         </div>
       </motion.div>
 
-      {/* CENTENNIAL SECTION */}
-      <motion.div
-        ref={centennialRef}
-        className="flex flex-col gap-10 w-full items-center justify-center py-16 bg-gradient-to-b from-slate-100 to-white px-10 lg:px-40"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeUp}
-      >
-        <div className="text-center items-center flex flex-col gap-4 max-w-3xl">
-          <Tag mode="dark">Special Announcement</Tag>
-          <h2 className="text-2xl lg:text-5xl font-bold">
-            Celebrating our 100th Anniversary
-          </h2>
-          <p className="text-slate-600 text-md lg:text-xl">
-            Join us for a momentous Centennial Celebration on December 14–16,
-            2025. Hosted by APO - ALUMNI ASSOCIATION of GREATER NEW YORK.
-          </p>
-          <p className="text-slate-600 text-md lg:text-xl">
-            You Are Invited To A Once in a Lifetime Event that You Don’t Want To
-            Miss. A Century of Great Leadership, Lasting Friendship, and
-            Relentless Service!
-          </p>
-          <div className="flex flex-row gap-4 justify-center mt-4">
-            <button
-              onClick={() =>
-                window.open(
-                  "https://docs.google.com/forms/d/e/1FAIpQLSd7FGy-1YDi5T7GfcANAFCUwm0OxU7YdI5otvp_VCbyPEIyZQ/viewform",
-                  "_blank"
-                )
-              }
-              className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded-lg font-semibold text-md lg:text-xl transition"
-            >
-              Register Now
-            </button>
-            <button
-              onClick={() => navigate("/centennial")}
-              className="bg-white text-[#282e3a] border border-slate-300 hover:bg-slate-200 px-6 py-3 rounded-lg font-semibold text-md lg:text-xl transition"
-            >
-              Learn More
-            </button>
-          </div>
-        </div>
-        <img
-          src="/centennial-register.PNG"
-          alt="Centennial Registration"
-          className="w-full max-w-xl rounded-lg shadow-md"
-        />
-        <div className="flex flex-col lg:flex-row w-full bg-[#282e3a] gap-10 p-10 rounded-xl shadow-lg">
-          <div className="flex flex-col gap-6 w-full lg:w-1/2 justify-between">
-            <h3 className="text-white text-2xl lg:text-4xl font-bold">
-              A Century of Service in the Greatest City
-            </h3>
-            <p className="text-yellow-200 text-sm lg:text-lg">
-              Since 1925, Alpha Phi Omega has been woven into the fabric of New
-              York City – from Harlem to Wall Street, from the Village to the
-              Heights.
-            </p>
-            <div className="hidden lg:flex gap-2">
-              <YellowTag icon={<FaLocationDot />} text="Leadership" />
-              <YellowTag icon={<FaLocationDot />} text="Friendship" />
-              <YellowTag icon={<FaLocationDot />} text="Service" />
-            </div>
-          </div>
-          <div className="w-full lg:w-1/2">
-            <video
-              src="/teaser-1.mp4"
-              className="w-full rounded-lg shadow-md"
-              controls
-            >
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
-      </motion.div>
-
       {/* SERVICE & FELLOWSHIP */}
-      <motion.div
+      {/* <motion.div
         className="flex flex-col lg:flex-row gap-8 bg-slate-100 py-16 px-6 lg:px-40"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeUp}
       >
-        {/* SERVICE */}
         <div className="flex flex-col gap-4 w-full">
           <Tag mode="light">Service</Tag>
           <h3 className="text-xl lg:text-4xl font-bold">
@@ -284,7 +207,6 @@ const LandingPage = () => {
           </div>
         </div>
 
-        {/* FELLOWSHIP */}
         <div className="flex flex-col gap-4 w-full">
           <Tag mode="light">Fellowship</Tag>
           <h3 className="text-xl lg:text-4xl font-bold">
@@ -306,7 +228,7 @@ const LandingPage = () => {
             </p>
           </div>
         </div>
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };

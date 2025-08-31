@@ -19,7 +19,7 @@ const Navbar = () => {
           <div className="flex flex-row gap-2 items-center">
             <img src="/100-year.png" className="w-auto h-5 lg:h-8" />
             <h1 className="text-white font-bold text-sm lg:text-xl">
-              Alpha Phi Omega AA Greater New York
+              APO ALUMNI ASSOCIATION OF GREATER NEW YORK
             </h1>
           </div>
 
