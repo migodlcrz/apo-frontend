@@ -123,39 +123,49 @@ const ExecomPanel = () => {
 
   return (
     <>
-      <div className="flex flex-wrap justify-center gap-6 py-12 bg-gray-50">
+      <div className="flex flex-wrap justify-center gap-8 py-12 bg-gradient-to-b from-transparent to-yellow-50/30 relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-yellow-100/20 via-transparent to-yellow-100/20 rounded-3xl -z-10"></div>
         {execomMembers.map((member, index) => (
           <div
             key={index}
-            className="w-full sm:w-[300px] bg-[#d2d2f5] rounded-lg overflow-hidden shadow-lg"
+            className="w-full sm:w-[320px] bg-gradient-to-b from-white to-yellow-50/50 rounded-2xl overflow-hidden shadow-2xl border-2 border-white/60 backdrop-blur-sm hover:scale-105 transition-all duration-300 relative group"
           >
-            <img
-              src={member.image}
-              alt={member.name}
-              className="w-full h-72 object-cover"
-            />
-            <div className="p-4 text-sm space-y-2">
-              <p className="text-gray-800 font-semibold">{member.role}</p>
+            <div className="absolute top-3 right-3 bg-yellow-400/80 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-bold text-black border border-white/50 z-10">
+              ✨ VIP
+            </div>
+            <div className="relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10"></div>
+              <img
+                src={member.image}
+                alt={member.name}
+                className="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+            <div className="p-6 text-sm space-y-3 relative">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-yellow-600"></div>
+              <div className="bg-gradient-to-r from-yellow-400/10 to-yellow-600/10 rounded-lg p-3 border border-yellow-200/50">
+                <p className="text-gray-800 font-bold text-center">{member.role}</p>
+              </div>
 
-              <div className="border-t border-gray-300 pt-2">
-                <h2 className="text-[#0c238a] font-bold">{member.name}</h2>
+              <div className="border-t border-yellow-200/50 pt-3">
+                <h2 className="text-[#0c238a] font-bold text-lg bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent">{member.name}</h2>
               </div>
 
               {member.description && (
-                <div className="border-t border-gray-300 pt-2">
-                  <p className="text-gray-700">{member.description}</p>
+                <div className="border-t border-yellow-200/50 pt-3">
+                  <p className="text-gray-700 bg-white/50 rounded-lg p-3 border border-yellow-100/50">{member.description}</p>
                 </div>
               )}
 
               {member.batch && (
-                <div className="border-t border-gray-300 pt-2">
-                  <p className="text-gray-700">{member.batch}</p>
+                <div className="border-t border-yellow-200/50 pt-3">
+                  <p className="text-gray-700 bg-yellow-50/50 rounded-lg p-2 font-medium">{member.batch}</p>
                 </div>
               )}
 
               {member.chapter && (
-                <div className="border-t border-gray-300 pt-2">
-                  <p className="text-gray-700 whitespace-pre-line">
+                <div className="border-t border-yellow-200/50 pt-3">
+                  <p className="text-gray-700 whitespace-pre-line bg-white/30 rounded-lg p-3 border border-yellow-100/30">
                     {member.chapter}
                   </p>
                 </div>
@@ -163,38 +173,41 @@ const ExecomPanel = () => {
 
               {(member.name === "Bro. Sol Jasper Kapunan" ||
                 member.name === 'Bro. Nathaniel "Dong" Roehl Ty') && (
-                <div className="border-t border-gray-300 pt-2">
+                <div className="border-t border-yellow-200/50 pt-3">
                   <button
                     onClick={() => openModal(member)}
-                    className="text-xs text-blue-800 underline hover:cursor-pointer"
+                    className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 py-2 rounded-lg text-xs font-bold hover:from-blue-500 hover:to-blue-600 transition-all shadow-lg border border-white/30"
                   >
-                    read more
+                    📖 Read More
                   </button>
                 </div>
               )}
 
               {member.socials && (
-                <div className="border-t border-gray-300 pt-2 flex gap-3 text-[#0c238a]">
+                <div className="border-t border-yellow-200/50 pt-3 flex gap-3 justify-center">
                   <a
                     href={member.socials.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="bg-gradient-to-r from-pink-500 to-purple-600 text-white p-2 rounded-full hover:scale-110 transition-transform shadow-lg"
                   >
-                    <FaInstagram size={18} />
+                    <FaInstagram size={16} />
                   </a>
                   <a
                     href={member.socials.facebook}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-2 rounded-full hover:scale-110 transition-transform shadow-lg"
                   >
-                    <FaFacebook size={18} />
+                    <FaFacebook size={16} />
                   </a>
                   <a
                     href={member.socials.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="bg-gradient-to-r from-blue-700 to-blue-800 text-white p-2 rounded-full hover:scale-110 transition-transform shadow-lg"
                   >
-                    <FaLinkedin size={18} />
+                    <FaLinkedin size={16} />
                   </a>
                 </div>
               )}

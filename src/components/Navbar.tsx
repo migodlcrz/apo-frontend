@@ -61,12 +61,12 @@ const Navbar = () => {
             >
               Store
             </li>
-            <li
+            {/* <li
               className="hover:text-[#e8d794] transition-colors duration-300 p-2 rounded cursor-pointer"
               onClick={() => navigate("/raffle")}
             >
               Raffle
-            </li>
+            </li> */}
           </ul>
 
           {/* Mobile Hamburger Menu (Hidden on Large Screens) */}

@@ -5,7 +5,10 @@ import YellowTag from "../components/YellowTag";
 
 const CentennialPage = () => {
   return (
-    <div className="flex flex-col gap-20 w-full justify-center items-center pt-20">
+    <div className="flex flex-col gap-20 w-full justify-center items-center pt-20 relative">
+      {/* Premium Background Elements */}
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-yellow-50/30 to-white/50 -z-10"></div>
+      <div className="absolute top-20 right-10 w-64 h-64 bg-gradient-to-r from-yellow-300/20 to-yellow-500/20 rounded-full blur-3xl -z-10"></div>
       {/* Added Centennial Links Section */}
       <div
         // ref={centennialRef}
@@ -15,9 +18,12 @@ const CentennialPage = () => {
         // viewport={{ once: true }}
         // variants={fadeUp}
       >
-        <div className="text-center items-center flex flex-col gap-4 max-w-3xl">
-          <Tag mode="dark">Special Announcement</Tag>
-          <h2 className="text-2xl lg:text-5xl font-bold">
+        <div className="text-center items-center flex flex-col gap-6 max-w-4xl relative">
+          <div className="relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-yellow-600/20 rounded-full blur-lg"></div>
+            <Tag mode="dark">🎉 Centennial Exclusive</Tag>
+          </div>
+          <h2 className="text-2xl lg:text-5xl font-bold bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
             Celebrating our 100th Anniversary
           </h2>
           <p className="text-slate-600 text-md lg:text-xl">
@@ -29,7 +35,7 @@ const CentennialPage = () => {
             Miss. A Century of Great Leadership, Lasting Friendship, and
             Relentless Service!
           </p>
-          <div className="flex flex-row gap-4 justify-center mt-4">
+          <div className="flex flex-row gap-4 justify-center mt-6">
             <button
               onClick={() =>
                 window.open(
@@ -37,24 +43,30 @@ const CentennialPage = () => {
                   "_blank"
                 )
               }
-              className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded-lg font-semibold text-md lg:text-xl transition"
+              className="relative group bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-400 hover:to-yellow-500 text-black px-8 py-4 rounded-xl font-bold text-md lg:text-xl transition-all transform hover:scale-105 shadow-2xl border-2 border-white/30"
             >
-              Register Now
+              <span className="absolute inset-0 bg-white/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity"></span>
+              <span className="relative flex items-center gap-2">
+                ✨ Register Now
+              </span>
             </button>
-            <button
-              // onClick={() => navigate("/centennial")}
-              className="bg-white text-[#282e3a] border border-slate-300 hover:bg-slate-200 px-6 py-3 rounded-lg font-semibold text-md lg:text-xl transition"
-            >
+            <button className="relative bg-white/80 backdrop-blur-sm text-[#282e3a] border-2 border-yellow-300/50 hover:bg-yellow-50 hover:border-yellow-400 px-8 py-4 rounded-xl font-bold text-md lg:text-xl transition-all shadow-xl">
               Learn More
             </button>
           </div>
         </div>
-        <img
-          src="/centennial-register.PNG"
-          alt="Centennial Registration"
-          className="w-full max-w-xl rounded-lg shadow-md"
-        />
-        <div className="flex flex-col lg:flex-row w-full bg-[#282e3a] gap-10 p-10 rounded-xl shadow-lg">
+        <div className="relative group">
+          <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-yellow-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all"></div>
+          <img
+            src="/centennial-register.PNG"
+            alt="Centennial Registration"
+            className="relative w-full max-w-xl rounded-2xl shadow-2xl border-4 border-white/50 group-hover:scale-105 transition-transform"
+          />
+        </div>
+        <div className="relative flex flex-col lg:flex-row w-full bg-gradient-to-r from-[#282e3a] to-[#1a1f2e] gap-10 p-10 rounded-2xl shadow-2xl border border-yellow-400/20">
+          <div className="absolute top-4 right-4 bg-yellow-400/20 backdrop-blur-sm px-3 py-1 rounded-full text-yellow-300 text-xs font-bold border border-yellow-400/30">
+            PREMIUM CONTENT
+          </div>
           <div className="flex flex-col gap-6 w-full lg:w-1/2 justify-between">
             <h3 className="text-white text-2xl lg:text-4xl font-bold">
               A Century of Service in the Greatest City
@@ -81,9 +93,16 @@ const CentennialPage = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col w-full items-center gap-10">
-        <div className="text-4xl font-bold">Centennial Events</div>
-        <div className="flex flex-col lg:flex-row gap-4 w-full px-20">
+      <div className="flex flex-col w-full items-center gap-10 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-yellow-50/20 to-transparent -z-10"></div>
+        <div className="relative text-center">
+          <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/10 to-yellow-600/10 rounded-2xl blur-2xl"></div>
+          <div className="relative text-4xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent px-8 py-4">
+            ✨ Exclusive Centennial Events
+          </div>
+        </div>
+        <div className="flex flex-col lg:flex-row gap-6 w-full lg:px-20 px-5 relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-yellow-100/30 via-transparent to-yellow-100/30 rounded-3xl -z-10"></div>
           <div className="flex flex-col gap-4 w-full lg:w-1/2">
             <CentennialCard
               title="Registration"
@@ -134,18 +153,26 @@ const CentennialPage = () => {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row w-full items-stretch h-auto lg:h-[calc(100vh)]">
-        <div className="w-full lg:w-2/3 lg:relative">
+      <div className="flex flex-col lg:flex-row w-full items-stretch h-auto lg:h-[calc(100vh)] relative">
+        <div className="absolute top-4 left-4 z-10 bg-black/50 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-bold border border-white/20">
+          🏆 EXCLUSIVE FEATURE
+        </div>
+        <div className="w-full lg:w-2/3 lg:relative group">
+          <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-transparent z-10 group-hover:opacity-50 transition-opacity"></div>
           <img
             src="the-grind.PNG"
             alt=""
-            className="lg:absolute lg:inset-0 w-full h-full lg:object-cover"
+            className="lg:absolute lg:inset-0 w-full h-full lg:object-cover filter brightness-110 contrast-105"
           />
         </div>
-        <div className="flex flex-col w-full lg:w-1/3 gap-5 bg-[#ffec9c] items-start p-10 lg:p-20">
-          <h1 className="text-black text-lg lg:text-5xl">
-            Meeting with the Mayor
-          </h1>
+        <div className="flex flex-col w-full lg:w-1/3 gap-5 bg-gradient-to-b from-[#ffec9c] to-[#dbbb17] items-start p-10 lg:p-20 relative">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-300/20 rounded-full blur-2xl"></div>
+          <div className="relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-black/10 to-transparent rounded-lg blur-sm"></div>
+            <h1 className="relative text-black text-lg lg:text-5xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text">
+              🏛️ Meeting with the Mayor
+            </h1>
+          </div>
           <span className="text-black">
             Mayor Sal Panto Jr of Easton, PA <br />
             Feb. 12, 2024 <br />
@@ -180,7 +207,7 @@ const CentennialPage = () => {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row w-full items-start gap-10 p-10 lg:p-20 bg-[#ffec9c]">
+      <div className="flex flex-col lg:flex-row w-full items-start gap-10 p-10 lg:p-20 bg-gradient-to-b from-[#ffec9c] to-[#dbbb17]">
         <div className="flex flex-col w-full lg:w-1/2">
           <h1 className="text-black text-lg lg:text-5xl font-bold mb-4">
             Centennial Planning in Action!

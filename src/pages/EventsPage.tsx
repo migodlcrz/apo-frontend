@@ -229,8 +229,11 @@ const EventsPage: React.FC = () => {
   ];
 
   return (
-    <div className="flex flex-col">
-      <div className="flex flex-col lg:flex-row p-8 gap-8 lg:gap-0">
+    <div className="flex flex-col relative">
+      {/* Premium Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-yellow-50/40 via-white to-yellow-50/20 -z-10"></div>
+      <div className="absolute top-20 right-10 w-80 h-80 bg-gradient-to-r from-yellow-300/15 to-yellow-500/15 rounded-full blur-3xl -z-10"></div>
+      <div className="flex flex-col lg:flex-row p-8 gap-8 lg:gap-0 relative">
         <div className="flex flex-col w-full lg:w-1/2 gap-5">
           <div>
             <h1 className="text-xl font-semibold text-gray-800">Today is</h1>
@@ -267,7 +270,7 @@ const EventsPage: React.FC = () => {
       </div>
 
       {/* Upcoming & Past Events Section */}
-      <div className="flex flex-col lg:flex-row bg-[#282e3a]">
+      <div className="flex flex-col lg:flex-row bg-gradient-to-b from-[#282e3a] via-[#1a1f2e] to-[#282e3a] relative">
         {/* <div className="flex flex-col w-1/2 p-8">
           <h1 className="text-white text-2xl font-bold">Upcoming events</h1>
         </div> */}
@@ -275,12 +278,21 @@ const EventsPage: React.FC = () => {
           <h1 className="text-white text-2xl font-bold">Past events</h1>
           <PastEvents events={pastEvents} />
         </div> */}
-        <div className="flex flex-col items-center w-full p-6 gap-10">
-          <h1 className="text-white text-2xl font-bold">Past events</h1>
+        <div className="flex flex-col items-center w-full p-8 gap-12 relative">
+          <div className="relative text-center">
+            <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-yellow-600/20 rounded-2xl blur-2xl"></div>
+            <h1 className="relative text-white text-3xl font-bold bg-gradient-to-r from-white via-yellow-100 to-white bg-clip-text">
+              📸 Past Events Gallery
+            </h1>
+          </div>
           <EventsCarousel events={pastEvents} />
           {/* More Photos Section */}
-          <YellowTag text="More Albums" />
-          <div className="grid grid-cols-1 lg:grid-cols-3 w-full max-w-screen-xl px-4 pb-12 gap-12 text-center">
+          <div className="relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-yellow-600/20 rounded-full blur-lg"></div>
+            <YellowTag text="✨ Exclusive Albums" />
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 w-full max-w-screen-xl px-4 pb-12 gap-12 text-center relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-yellow-100/10 via-transparent to-yellow-100/10 rounded-3xl -z-10"></div>
             {morePhotos.map((section, index) => (
               <Album
                 key={index}
