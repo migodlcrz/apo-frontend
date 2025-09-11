@@ -37,12 +37,12 @@ const RafflePage: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row items-center p-8 relative">
+    <div className="flex flex-col lg:flex-row items-center p-8 relative w-full h-full justify-center gap-8">
       {showConfetti && (
         <Confetti width={width} height={height} numberOfPieces={300} />
       )}
 
-      <div className="flex flex-col w-1/2 h-full items-center">
+      <div className="flex flex-col w-1/2 h-full items-center justify-center">
         <h1 className="text-2xl font-bold mb-4 text-center">
           Spin the Wheel Raffle
         </h1>
@@ -84,7 +84,7 @@ const RafflePage: React.FC = () => {
         )}
       </div>
 
-      <div className="flex flex-col w-full lg:w-1/2 h-full items-center">
+      <div className="flex flex-col w-full lg:w-1/2 h-full items-center justify-center">
         {winner && (
           <h2 className="text-xl font-bold text-green-500 mt-4">
             Winner: {winner}

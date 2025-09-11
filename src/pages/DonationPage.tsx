@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { FaDonate } from "react-icons/fa";
+import RafflePage from "./RafflePage";
 
 const DonationPage = () => {
   const formRef = useRef<HTMLDivElement>(null);
@@ -236,6 +237,9 @@ const DonationPage = () => {
             </button>
           </form>
         </div>
+      </div>
+      <div className="flex items-center justify-center bg-slate-100 w-screen h-screen">
+        <RafflePage />
       </div>
     </div>
   );
